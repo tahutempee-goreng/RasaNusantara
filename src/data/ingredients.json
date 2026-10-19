@@ -1,0 +1,577 @@
+[
+  {
+    "id": "tenggiri",
+    "name": "Ikan tenggiri",
+    "group": "utama",
+    "aliases": [
+      "ikan tenggiri"
+    ],
+    "allergens": [
+      "hasil laut"
+    ]
+  },
+  {
+    "id": "patin",
+    "name": "Ikan patin",
+    "group": "utama",
+    "aliases": [
+      "ikan patin"
+    ],
+    "allergens": [
+      "hasil laut"
+    ]
+  },
+  {
+    "id": "sagu",
+    "name": "Tepung sagu",
+    "group": "utama",
+    "aliases": [
+      "tepung sagu"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "tapioka",
+    "name": "Tepung tapioka",
+    "group": "utama",
+    "aliases": [
+      "tepung tapioka"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "telur",
+    "name": "Telur",
+    "group": "utama",
+    "aliases": [
+      "telur"
+    ],
+    "allergens": [
+      "telur"
+    ]
+  },
+  {
+    "id": "udang",
+    "name": "Udang",
+    "group": "utama",
+    "aliases": [
+      "udang"
+    ],
+    "allergens": [
+      "hasil laut"
+    ]
+  },
+  {
+    "id": "santan",
+    "name": "Santan",
+    "group": "pelengkap",
+    "aliases": [
+      "santan"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "bawang-putih",
+    "name": "Bawang putih",
+    "group": "bumbu",
+    "aliases": [
+      "bawang putih"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "garam",
+    "name": "Garam",
+    "group": "bumbu",
+    "aliases": [
+      "garam"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "minyak",
+    "name": "Minyak goreng",
+    "group": "pelengkap",
+    "aliases": [
+      "minyak goreng"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "asam",
+    "name": "Asam jawa",
+    "group": "bumbu",
+    "aliases": [
+      "asam jawa"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kunyit",
+    "name": "Kunyit",
+    "group": "bumbu",
+    "aliases": [
+      "kunyit"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "air",
+    "name": "Air",
+    "aliases": [
+      "air bersih"
+    ],
+    "group": "pelengkap",
+    "allergens": []
+  },
+  {
+    "id": "sapi",
+    "name": "Daging sapi",
+    "group": "utama",
+    "aliases": [
+      "daging sapi"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "iga-sapi",
+    "name": "Iga sapi",
+    "group": "utama",
+    "aliases": [
+      "iga sapi"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "ayam",
+    "name": "Ayam",
+    "group": "utama",
+    "aliases": [
+      "ayam"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "nangka-muda",
+    "name": "Nangka muda",
+    "group": "utama",
+    "aliases": [
+      "nangka muda"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "bawang-merah",
+    "name": "Bawang merah",
+    "group": "bumbu",
+    "aliases": [
+      "bawang merah"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "cabai-merah",
+    "name": "Cabai merah",
+    "group": "bumbu",
+    "aliases": [
+      "cabai merah"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "cabai-rawit",
+    "name": "Cabai rawit",
+    "group": "bumbu",
+    "aliases": [
+      "cabai rawit"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "jahe",
+    "name": "Jahe",
+    "group": "bumbu",
+    "aliases": [
+      "jahe"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "lengkuas",
+    "name": "Lengkuas",
+    "group": "bumbu",
+    "aliases": [
+      "lengkuas"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "serai",
+    "name": "Serai",
+    "group": "bumbu",
+    "aliases": [
+      "serai"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "daun-jeruk",
+    "name": "Daun jeruk",
+    "group": "bumbu",
+    "aliases": [
+      "daun jeruk"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "daun-salam",
+    "name": "Daun salam",
+    "group": "bumbu",
+    "aliases": [
+      "daun salam"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "daun-kunyit",
+    "name": "Daun kunyit",
+    "group": "bumbu",
+    "aliases": [
+      "daun kunyit"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kemiri",
+    "name": "Kemiri",
+    "group": "bumbu",
+    "aliases": [
+      "kemiri"
+    ],
+    "allergens": [
+      "kemiri"
+    ]
+  },
+  {
+    "id": "ketumbar",
+    "name": "Ketumbar",
+    "group": "bumbu",
+    "aliases": [
+      "ketumbar"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "jintan",
+    "name": "Jintan",
+    "group": "bumbu",
+    "aliases": [
+      "jintan"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "merica",
+    "name": "Merica",
+    "group": "bumbu",
+    "aliases": [
+      "merica"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "gula",
+    "name": "Gula pasir",
+    "group": "bumbu",
+    "aliases": [
+      "gula pasir"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "gula-merah",
+    "name": "Gula merah",
+    "group": "bumbu",
+    "aliases": [
+      "gula merah"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kayu-manis",
+    "name": "Kayu manis",
+    "group": "bumbu",
+    "aliases": [
+      "kayu manis"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "cengkih",
+    "name": "Cengkih",
+    "group": "bumbu",
+    "aliases": [
+      "cengkih"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kapulaga",
+    "name": "Kapulaga",
+    "group": "bumbu",
+    "aliases": [
+      "kapulaga"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "pala",
+    "name": "Pala",
+    "group": "bumbu",
+    "aliases": [
+      "pala"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "bunga-lawang",
+    "name": "Bunga lawang",
+    "group": "bumbu",
+    "aliases": [
+      "bunga lawang"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "asam-kandis",
+    "name": "Asam kandis",
+    "group": "bumbu",
+    "aliases": [
+      "asam kandis"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kluwek",
+    "name": "Kluwek siap masak",
+    "group": "bumbu",
+    "aliases": [
+      "kluwek siap masak"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kacang-tanah",
+    "name": "Kacang tanah",
+    "group": "bumbu",
+    "aliases": [
+      "kacang tanah"
+    ],
+    "allergens": [
+      "kacang tanah"
+    ]
+  },
+  {
+    "id": "kaldu",
+    "name": "Kaldu bubuk",
+    "group": "bumbu",
+    "aliases": [
+      "kaldu bubuk"
+    ],
+    "allergens": [
+      "periksa label kemasan kaldu"
+    ]
+  },
+  {
+    "id": "jeruk-nipis",
+    "name": "Jeruk nipis",
+    "group": "pelengkap",
+    "aliases": [
+      "jeruk nipis"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "nanas",
+    "name": "Nanas",
+    "group": "utama",
+    "aliases": [
+      "nanas"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "tomat",
+    "name": "Tomat",
+    "group": "utama",
+    "aliases": [
+      "tomat"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kemangi",
+    "name": "Kemangi",
+    "group": "pelengkap",
+    "aliases": [
+      "kemangi"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "daun-bawang",
+    "name": "Daun bawang",
+    "group": "pelengkap",
+    "aliases": [
+      "daun bawang"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "jamur-kuping",
+    "name": "Jamur kuping",
+    "group": "pelengkap",
+    "aliases": [
+      "jamur kuping"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "soun",
+    "name": "Soun",
+    "group": "pelengkap",
+    "aliases": [
+      "soun"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "timun",
+    "name": "Timun",
+    "group": "pelengkap",
+    "aliases": [
+      "timun"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "seledri",
+    "name": "Seledri",
+    "group": "pelengkap",
+    "aliases": [
+      "seledri"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "bawang-goreng",
+    "name": "Bawang goreng",
+    "group": "pelengkap",
+    "aliases": [
+      "bawang goreng"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "cuko",
+    "name": "Cuko siap saji",
+    "group": "pelengkap",
+    "aliases": [
+      "cuko siap saji"
+    ],
+    "allergens": [
+      "periksa label kemasan cuko"
+    ]
+  },
+  {
+    "id": "air-kelapa",
+    "name": "Air kelapa",
+    "group": "pelengkap",
+    "aliases": [
+      "air kelapa"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "tauge",
+    "name": "Tauge pendek",
+    "group": "pelengkap",
+    "aliases": [
+      "tauge pendek"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "telur-asin",
+    "name": "Telur asin",
+    "group": "pelengkap",
+    "aliases": [
+      "telur asin"
+    ],
+    "allergens": [
+      "telur"
+    ]
+  },
+  {
+    "id": "kol",
+    "name": "Kol",
+    "group": "pelengkap",
+    "aliases": [
+      "kol"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "kerupuk-udang",
+    "name": "Kerupuk udang",
+    "group": "pelengkap",
+    "aliases": [
+      "kerupuk udang"
+    ],
+    "allergens": [
+      "udang",
+      "periksa label kemasan kerupuk"
+    ]
+  },
+  {
+    "id": "ketupat",
+    "name": "Ketupat matang",
+    "group": "pelengkap",
+    "aliases": [
+      "ketupat matang"
+    ],
+    "allergens": []
+  },
+  {
+    "id": "tauco",
+    "name": "Tauco",
+    "group": "pelengkap",
+    "aliases": [
+      "tauco"
+    ],
+    "allergens": [
+      "kedelai"
+    ]
+  },
+  {
+    "id": "saus-kacang",
+    "name": "Sambal kacang siap saji",
+    "group": "pelengkap",
+    "aliases": [
+      "sambal kacang siap saji"
+    ],
+    "allergens": [
+      "kacang tanah",
+      "periksa label kemasan sambal"
+    ]
+  },
+  {
+    "id": "bawang-putih-goreng",
+    "name": "Bawang putih goreng",
+    "aliases": [
+      "bawang putih goreng"
+    ],
+    "group": "pelengkap",
+    "allergens": []
+  }
+]

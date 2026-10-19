@@ -1,0 +1,60 @@
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import {practicalQuantity} from '@/lib/quantities';
+import {AiChatIcon} from './ai-advisor';
+import type { ClientCatalog } from '@/lib/schema';
+type Recipe = ClientCatalog['recipes'][number];
+type Props = { recipe: Recipe; catalog: ClientCatalog; selected: string[] };
+export function recipePortions(value: string | null, fallback: number) { const n=Number(value); return Number.isInteger(n)&&n>=1&&n<=12?n:fallback; }
+export function RecipeArt({ recipe }: { recipe: Recipe }) {
+  return recipe.image ? <figure className="dish-portrait"><img src={recipe.image.path} alt={recipe.image.alt} width={768} height={768}/></figure> : null;
+}
+export function RecipeIngredients({ recipe, catalog, selected, step, portions, onPortions }: Props & { step?: number; portions?: number; onPortions?: (n:number)=>void }) {
+ const servings = portions ?? recipe.servings;
+ const items = step === undefined ? recipe.ingredients : recipe.ingredients.filter(item => recipe.steps[step].ingredientIds.includes(item.ingredientId));
+ const [group,setGroup]=useState<'core'|'support'|'optional'>('core');
+ const [page,setPage]=useState(0);
+ const filtered=step===undefined?items.filter(item=>item.role===group):items;
+ const pages=Math.max(1,Math.ceil(filtered.length/6));
+ const current=Math.min(page,pages-1);
+ const visible=filtered.slice(current*6,current*6+6);
+ return <div className="recipe-ingredients">
+ {step === undefined && <><div className="servings-control"><label htmlFor={'servings-'+recipe.id}>Takaran untuk</label><select id={'servings-'+recipe.id} value={servings} onChange={event=>onPortions?.(Number(event.target.value))}>{Array.from({length:12},(_,i)=>i+1).map(n=><option key={n} value={n}>{n} porsi</option>)}</select></div><p className="small">Resep asal {recipe.servings} porsi. Takaran mengikuti porsi. “Sekitar” menandai perkiraan; waktu memasak tidak otomatis berubah.</p></>}
+ {step===undefined&&<div className="recipe-group-buttons" role="group" aria-label="Kelompok bahan">{(['core','support','optional'] as const).filter(role=>items.some(item=>item.role===role)).map(role=><button type="button" key={role} aria-pressed={group===role} onClick={()=>{setGroup(role);setPage(0);}}>{role==='core'?'Inti':role==='support'?'Bumbu & pendukung':'Opsional'} <span>{items.filter(item=>item.role===role).length}</span></button>)}</div>}
+ <ul className="ingredient-list recipe-ingredient-grid">{visible.map(item=><li key={item.ingredientId}><span>{catalog.ingredients.find(i=>i.id===item.ingredientId)?.name}<small>{item.note && <>{servings!==recipe.servings?`Catatan asal ${recipe.servings} porsi: `:""}{item.note} · </>}{selected.includes(item.ingredientId)?'Tersedia di dapur':'Perlu disiapkan'}{['telur','pala'].includes(item.ingredientId)&&practicalQuantity(item,servings,recipe.servings).preparation&&<><br/>{practicalQuantity(item,servings,recipe.servings).preparation}</>}</small></span><b>{practicalQuantity(item,servings,recipe.servings).text}</b></li>)}</ul>
+ {filtered.length>6&&<nav className="recipe-ingredient-paging" aria-label="Halaman takaran"><button type="button" className="secondary" disabled={current===0} onClick={()=>setPage(current-1)}>Sebelumnya</button><span role="status">{current*6+1}–{Math.min(current*6+6,filtered.length)} dari {filtered.length}</span><button type="button" className="secondary" disabled={current+1>=pages} onClick={()=>setPage(current+1)}>Berikutnya</button></nav>}
+ {!items.length&&<p>Ikuti instruksi langkah ini. Takaran lengkap tersedia pada detail resep.</p>}
+ </div>;
+}
+export function RecipeStepFlow({recipe,current,onSelect}:{recipe:Recipe;current:number;onSelect:(index:number)=>void}) {
+ const flow=useRef<HTMLElement>(null);
+ useEffect(()=>{const rail=flow.current?.querySelector('ol'),item=rail?.children[current] as HTMLElement|undefined;if(!rail||!item||rail.scrollWidth<=rail.clientWidth)return;const a=rail.getBoundingClientRect(),b=item.getBoundingClientRect();if(b.left<a.left)rail.scrollLeft-=a.left-b.left;else if(b.right>a.right)rail.scrollLeft+=b.right-a.right;},[current]);
+ return <nav ref={flow} className="recipe-step-flow" aria-label="Alur memasak"><ol>{recipe.steps.map((item,index)=><li key={item.order}><button type="button" aria-current={index===current?'step':undefined} onClick={()=>onSelect(index)}><span className="flow-number" aria-hidden="true">{index+1}</span><span><span className="flow-title">{item.title}</span>{index===current&&<small>Sedang dibaca</small>}</span></button></li>)}</ol></nav>;
+}
+function RecipeDirections({recipe,catalog,selected,portions}:Props & {portions:number}) {
+ const [current,setCurrent]=useState(0);
+ const heading=useRef<HTMLHeadingElement>(null);
+ const step=recipe.steps[current];
+ function go(index:number){setCurrent(index);requestAnimationFrame(()=>heading.current?.focus({preventScroll:true}));}
+ return <><p className="directions-help">Ikuti urutannya dari awal atau pilih langkah untuk membaca lebih dulu.</p><div className="directions-flow"><RecipeStepFlow recipe={recipe} current={current} onSelect={go}/><div className="direction-content"><p className="direction-position">Langkah {current+1} dari {recipe.steps.length}</p><h3 ref={heading} tabIndex={-1}>{step.title}</h3><p className="direction-instruction">{step.instruction}</p>{portions!==recipe.servings&&<p className="small">Takaran bahan mengikuti {portions} porsi. Angka dalam instruksi tetap mengacu pada resep asal {recipe.servings} porsi.</p>}<details className="direction-ingredients" key={current}><summary>Bahan untuk langkah ini</summary><RecipeIngredients recipe={recipe} catalog={catalog} selected={selected} portions={portions} step={current}/></details><div className="direction-actions"><button type="button" className="secondary" disabled={current===0} onClick={()=>go(current-1)}>← Sebelumnya</button>{current<recipe.steps.length-1?<button type="button" onClick={()=>go(current+1)}>Langkah berikutnya →</button>:<Link className="button" href={'/masak/'+recipe.slug+'?porsi='+portions}>Mulai Cooking Mode →</Link>}</div>{current<recipe.steps.length-1&&<p className="direction-next">Berikutnya: {recipe.steps[current+1].title}</p>}<p className="small">Ini pratinjau alur. Gunakan Cooking Mode saat siap memasak untuk menyimpan progres.</p></div></div></>;
+}
+function QuantityNotes({recipe,catalog}:{recipe:Recipe;catalog:ClientCatalog}){
+ const converted=recipe.ingredients.filter(item=>item.practicalMeasure);
+ return <div className="quantity-notes"><h3>Tentang takaran praktis</h3><p>Berat bahan dapat berbeda menurut ukuran dan varietas. Padanan ini membantu menyiapkan porsi pilihan, bukan hasil uji memasak. Untuk rempah di bawah satu gram, gunakan timbangan rempah yang sesuai; jangan dibulatkan menjadi satu gram.</p><p>Sendok berarti sendok takar rata. Bahan tanpa acuan berat tetap memakai satuan sumber dengan pecahan tertulis, agar beratnya tidak dikarang. Angka di instruksi tetap mengikuti resep asal.</p>{converted.length>0&&<ul>{converted.map(item=><li key={item.ingredientId}><b>{catalog.ingredients.find(i=>i.id===item.ingredientId)?.name}</b><span>Takaran asal: {new Intl.NumberFormat('id-ID',{maximumFractionDigits:4}).format(item.amount)} {item.unit} untuk {recipe.servings} porsi.</span><span>{item.practicalMeasure!.reference}</span>{item.practicalMeasure!.preparation&&<span>{item.practicalMeasure!.preparation}</span>}{item.practicalMeasure!.sourceIds.map(id=>{const source=catalog.sources.find(s=>s.id===id);return source?<a key={id} href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>:null;})}</li>)}</ul>}</div>;
+}
+export function RecipeDetail({recipe,catalog,selected}:Props) {
+ const params=useSearchParams();
+ const [portions,setPortions]=useState(()=>recipePortions(params.get('porsi'),recipe.servings));
+ const [view,setView]=useState('bahan-resep');
+ const sections=[['bahan-resep','Bahan & takaran'],['langkah-resep','Langkah memasak'],['cerita-resep','Cerita & sumber']];
+ useEffect(()=>{const update=()=>{const hash=location.hash.slice(1);if(['bahan-resep','langkah-resep','cerita-resep'].includes(hash))setView(hash);};update();window.addEventListener('hashchange',update);return()=>window.removeEventListener('hashchange',update);},[]);
+ function changeView(id:string){setView(id);history.replaceState(null,'','#'+id);}
+ const allergens=[...new Set(recipe.ingredients.flatMap(item=>catalog.ingredients.find(i=>i.id===item.ingredientId)?.allergens||[]))];
+ return <section className="workspace recipe-page"><Link className="back" href="/hasil">← Kembali ke kecocokan</Link><div className="recipe-intro"><div><h1>{recipe.title}</h1><p className="recipe-origin">{recipe.origin} · {recipe.dishType==='berkuah'?'Berkuah':'Kering'}</p><p className="recipe-description">{recipe.variant}</p><dl className="recipe-facts"><div><dt>Persiapan</dt><dd>{recipe.prepMinutes} menit</dd></div><div><dt>Memasak</dt><dd>{recipe.cookMinutes} menit</dd></div><div><dt>Porsi asal</dt><dd>{recipe.servings} orang</dd></div></dl><Link className="button" href={'/masak/'+recipe.slug+'?porsi='+portions}>Mulai Cooking Mode →</Link><Link className="recipe-ai-entry" href={'/masak/'+recipe.slug+'?porsi='+portions+'#ai-teman-dapur'}><span className="recipe-ai-mark"><AiChatIcon/></span><span><b>Masak ditemani AI Teman Dapur</b><small>Tanya soal api, bahan, atau langkah memasak <span aria-hidden="true">↗</span></small></span></Link><a className="recipe-jump" href="#bahan-resep" onClick={()=>setView('bahan-resep')}>Periksa bahan & takaran</a></div><RecipeArt recipe={recipe}/></div>
+ <div className="preparation-note"><h2>Sebelum mulai</h2><p><b>Alat:</b> {recipe.equipment.join(', ')}</p><p><b>Alergen:</b> {allergens.join(', ')||'Tidak ada alergen tercatat; periksa kembali bahan dan kemasannya.'}</p><details><summary>Catatan resep</summary><p>{recipe.timeNote}</p><p>{recipe.adaptationNote}</p><QuantityNotes recipe={recipe} catalog={catalog}/><Link href="/tentang#kredit-visual">Tentang sumber & visual</Link></details></div>
+ <div className="recipe-section-tabs" role="tablist" aria-label="Isi resep" onKeyDown={event=>{const index=sections.findIndex(([id])=>'tab-'+id===(event.target as HTMLElement).id);const next=event.key==='ArrowRight'?(index+1)%3:event.key==='ArrowLeft'?(index+2)%3:event.key==='Home'?0:event.key==='End'?2:-1;if(next>=0){event.preventDefault();changeView(sections[next][0]);document.getElementById('tab-'+sections[next][0])?.focus();}}}>{sections.map(([id,label])=><button key={id} type="button" role="tab" id={'tab-'+id} aria-controls={id} aria-selected={view===id} tabIndex={view===id?0:-1} onClick={()=>changeView(id)}>{label}</button>)}</div>
+ <div className="recipe-directions"><section id="bahan-resep" role="tabpanel" aria-labelledby="tab-bahan-resep" hidden={view!=='bahan-resep'}><h2>Bahan & takaran</h2><RecipeIngredients key={recipe.id} recipe={recipe} catalog={catalog} selected={selected} portions={portions} onPortions={setPortions}/></section><section id="langkah-resep" role="tabpanel" aria-labelledby="tab-langkah-resep" hidden={view!=='langkah-resep'}><h2>Langkah memasak</h2><RecipeDirections key={recipe.id} recipe={recipe} catalog={catalog} selected={selected} portions={portions}/></section></div>
+ <section className="culture" id="cerita-resep" role="tabpanel" aria-labelledby="tab-cerita-resep" hidden={view!=='cerita-resep'}><h2>Cerita dari {recipe.origin}</h2><p>{recipe.culture.summary}</p><details><summary>Sumber resep dan cerita</summary><ul>{[...new Set([...recipe.sourceIds,...recipe.culture.sourceIds])].map(id=>{const source=catalog.sources.find(s=>s.id===id)!;return <li key={id}><a href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a></li>;})}</ul></details></section></section>;
+}

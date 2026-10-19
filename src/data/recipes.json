@@ -1,0 +1,3408 @@
+[
+  {
+    "id": "tekwan-contoh",
+    "slug": "tekwan-contoh",
+    "title": "Tekwan",
+    "variant": "Bola ikan dengan kuah udang",
+    "regionId": "palembang",
+    "origin": "Palembang, Sumatra Selatan",
+    "dishType": "berkuah",
+    "mainIngredientId": "tenggiri",
+    "servings": 8,
+    "prepMinutes": 35,
+    "cookMinutes": 55,
+    "timeNote": "Total 90 menit mengikuti referensi; pembagian persiapan 35 dan memasak 55 menit merupakan perkiraan.",
+    "adaptationNote": "Adaptasi ringkas resep RasaBunda; memakai tapioka, bukan menyamakan tapioka dengan sagu. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "tenggiri",
+        "amount": 500,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "tapioka",
+        "amount": 400,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "telur",
+        "amount": 2,
+        "unit": "butir",
+        "role": "support",
+        "note": "gunakan putihnya",
+        "practicalMeasure": {
+          "amount": 70,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003706, measure 44630: putih telur ayam mentah dari 1 telur = 35 gram; kuning dan cangkang tidak dihitung.",
+          "preparation": "Pisahkan kuningnya, lalu timbang putih telur mentah saja sesuai takaran."
+        }
+      },
+      {
+        "ingredientId": "air",
+        "amount": 2200,
+        "unit": "ml",
+        "role": "support",
+        "note": "200 ml dingin untuk adonan; 2 liter untuk kuah, tambah untuk merebus"
+      },
+      {
+        "ingredientId": "udang",
+        "amount": 100,
+        "unit": "gram",
+        "role": "core",
+        "note": "kepala dan kulit untuk kaldu"
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 14,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 44.1,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 4,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 24,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "merica",
+        "amount": 1.5,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kaldu",
+        "amount": 1.5,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "bawang-goreng",
+        "amount": 3,
+        "unit": "sdm",
+        "role": "support",
+        "note": "1 sdm adonan, sisanya taburan"
+      },
+      {
+        "ingredientId": "jamur-kuping",
+        "amount": 200,
+        "unit": "gram",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "soun",
+        "amount": 100,
+        "unit": "gram",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "timun",
+        "amount": 1,
+        "unit": "buah",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 213,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003323, measure 47453: mentimun sedang mentah = 213 gram; ukuran lokal dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "seledri",
+        "amount": 1,
+        "unit": "batang",
+        "role": "optional"
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Siapkan kaldu",
+        "instruction": "Rebus kepala dan kulit udang dengan air kuah, lalu saring. Rebus jamur dan soun secara terpisah.",
+        "ingredientIds": [
+          "udang",
+          "air",
+          "jamur-kuping",
+          "soun"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Campur adonan",
+        "instruction": "Goreng bawang putih. Haluskan ikan dengan air dingin, putih telur dan sebagian bawang. Aduk tapioka, garam, kaldu, merica dan sedikit bawang goreng.",
+        "ingredientIds": [
+          "tenggiri",
+          "air",
+          "telur",
+          "tapioka",
+          "bawang-putih",
+          "garam",
+          "kaldu",
+          "merica",
+          "bawang-goreng",
+          "minyak"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Rebus bola",
+        "instruction": "Sendokkan adonan kecil ke air panas. Rebus hingga bagian tengah matang, lalu tiriskan.",
+        "ingredientIds": [
+          "air"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Selesaikan kuah",
+        "instruction": "Tumis sisa bawang, tambahkan kaldu udang dan sisa bumbu. Didihkan, masukkan bola ikan. Sajikan dengan pelengkap.",
+        "ingredientIds": [
+          "bawang-putih",
+          "minyak",
+          "garam",
+          "kaldu",
+          "merica",
+          "timun",
+          "seledri"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Tekwan dikenal sebagai sup ikan Palembang. Bola ikan kecil ditemani kuah udang dan pelengkap seperti jamur serta soun.",
+      "sourceIds": [
+        "rb-tekwan"
+      ]
+    },
+    "sourceIds": [
+      "rb-tekwan"
+    ],
+    "image": {
+      "path": "/images/journal/tekwan.webp",
+      "alt": "Ilustrasi AI Tekwan",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 2
+  },
+  {
+    "id": "pindang-contoh",
+    "slug": "pindang-contoh",
+    "title": "Pindang Patin",
+    "variant": "Kuah asam segar dengan nanas",
+    "regionId": "palembang",
+    "origin": "Palembang, Sumatra Selatan",
+    "dishType": "berkuah",
+    "mainIngredientId": "patin",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "timeNote": "Total 45 menit mengikuti sumber; pembagian 20 menit persiapan dan 25 menit memasak diperkirakan.",
+    "adaptationNote": "Adaptasi Sasa tanpa tambahan MSG; garam dan jumlah porsi diperkirakan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "patin",
+        "amount": 2,
+        "unit": "ekor",
+        "role": "core",
+        "note": "ukuran sedang, potong menjadi 6 bagian",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "potong",
+          "mode": "always",
+          "approximate": false,
+          "sourceIds": [
+            "sasa-pindang"
+          ],
+          "reference": "Sumber resep membagi jumlah asal menjadi enam potong untuk enam porsi.",
+          "preparation": "Patin ukuran sedang: setiap ekor dipotong tiga bagian."
+        }
+      },
+      {
+        "ingredientId": "air",
+        "amount": 1500,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "nanas",
+        "amount": 100,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "tomat",
+        "amount": 2,
+        "unit": "buah",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 232,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F009210, measure 47993: tomat sedang mentah = 116 gram; ukuran lokal dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "jeruk-nipis",
+        "amount": 1,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.3,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 1,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 1,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 1,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "asam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 2,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6.3,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 8,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 43.2,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 2,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 2,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 5.2,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "cabai-merah",
+        "amount": 7,
+        "unit": "buah",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 85.75,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F002901, measure 47433: cabai merah mentah = 12,25 gram; varietas dan ukuran cabai lokal dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "cabai-rawit",
+        "amount": 2,
+        "unit": "buah",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6.67,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "rawit-weight"
+          ],
+          "reference": "Acuan varietas CR 2093: 3,25–3,42 gram/buah; titik tengah 3,335 gram adalah perkiraan, bukan ukuran semua cabai rawit."
+        }
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "note": "sesuaikan rasa",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 2,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 12,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh gula = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 3,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kemangi",
+        "amount": 25,
+        "unit": "gram",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "daun-bawang",
+        "amount": 1,
+        "unit": "batang",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 15,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F006250, measure 47656: 1 batang spring onion mentah = 15 gram; ukuran dapat berbeda."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Siapkan ikan",
+        "instruction": "Bersihkan patin dan lumuri jeruk nipis selama 15 menit. Haluskan bawang, kunyit, kemiri dan cabai.",
+        "ingredientIds": [
+          "patin",
+          "jeruk-nipis",
+          "bawang-putih",
+          "bawang-merah",
+          "kunyit",
+          "kemiri",
+          "cabai-merah",
+          "cabai-rawit"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Tumis bumbu",
+        "instruction": "Panaskan minyak. Masak bumbu halus bersama daun jeruk, serai, jahe dan salam sampai harum. Tambahkan tomat.",
+        "ingredientIds": [
+          "minyak",
+          "daun-jeruk",
+          "serai",
+          "jahe",
+          "daun-salam",
+          "tomat"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Masak pindang",
+        "instruction": "Tuangkan air. Setelah mendidih, masukkan nanas, asam, patin, garam dan gula. Masak sampai ikan matang tanpa sering diaduk.",
+        "ingredientIds": [
+          "air",
+          "nanas",
+          "asam",
+          "patin",
+          "garam",
+          "gula"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Sajikan",
+        "instruction": "Tambahkan kemangi dan daun bawang menjelang diangkat. Periksa rasa kuah dan sajikan hangat.",
+        "ingredientIds": [
+          "kemangi",
+          "daun-bawang"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Pindang patin menyandingkan ikan dengan rasa asam, pedas dan aroma rempah. Nanas memberi kesegaran pada versi ini.",
+      "sourceIds": [
+        "sasa-pindang"
+      ]
+    },
+    "sourceIds": [
+      "sasa-pindang"
+    ],
+    "image": {
+      "path": "/images/journal/pindang-patin.webp",
+      "alt": "Ilustrasi AI Pindang Patin",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 2
+  },
+  {
+    "id": "adaan-contoh",
+    "slug": "adaan-contoh",
+    "title": "Pempek Adaan",
+    "variant": "Bulat, gurih, langsung digoreng",
+    "regionId": "palembang",
+    "origin": "Palembang, Sumatra Selatan",
+    "dishType": "kering",
+    "mainIngredientId": "tenggiri",
+    "servings": 6,
+    "prepMinutes": 35,
+    "cookMinutes": 55,
+    "timeNote": "Total 90 menit mengikuti sumber; pembagian 35/55 menit diperkirakan dan mencakup penggorengan bertahap.",
+    "adaptationNote": "Adaptasi Sasa tanpa MSG. Cuko memakai pelengkap siap saji; takaran minyak dan porsi diperkirakan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "tenggiri",
+        "amount": 500,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "santan",
+        "amount": 200,
+        "unit": "ml",
+        "role": "core"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 50,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "telur",
+        "amount": 2,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 102,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003729, measure 44616: 1 telur ayam mentah, isi tanpa cangkang = 51 gram.",
+          "preparation": "Timbang isi telur tanpa cangkang; untuk adonan, kocok lepas dahulu."
+        }
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 20,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 5,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "tapioka",
+        "amount": 350,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 500,
+        "unit": "ml",
+        "role": "support",
+        "note": "untuk menggoreng, tidak seluruhnya terserap"
+      },
+      {
+        "ingredientId": "cuko",
+        "amount": 150,
+        "unit": "ml",
+        "role": "optional"
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Campur ikan",
+        "instruction": "Aduk ikan giling dengan santan dan air bertahap, lalu telur, gula dan garam sampai rata.",
+        "ingredientIds": [
+          "tenggiri",
+          "santan",
+          "air",
+          "telur",
+          "gula",
+          "garam"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Tambahkan tepung",
+        "instruction": "Masukkan tapioka perlahan. Aduk secukupnya hingga menyatu, tanpa menguleni berlebihan.",
+        "ingredientIds": [
+          "tapioka"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Goreng bulatan",
+        "instruction": "Bentuk bulatan kecil memakai dua sendok. Goreng dengan api sedang sampai kecokelatan dan bagian tengah matang. Tiriskan.",
+        "ingredientIds": [
+          "minyak"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Hidangkan",
+        "instruction": "Sajikan hangat. Cuko siap saji dapat ditambahkan sesuai selera.",
+        "ingredientIds": [
+          "cuko"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Adaan adalah pempek berbentuk bulat yang digoreng. Pempek menjadi salah satu hidangan yang erat dengan Palembang dan biasa ditemani cuko.",
+      "sourceIds": [
+        "travel-pempek"
+      ]
+    },
+    "sourceIds": [
+      "sasa-adaan"
+    ],
+    "image": {
+      "path": "/images/journal/pempek-adaan.webp",
+      "alt": "Ilustrasi AI Pempek Adaan",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 2
+  },
+  {
+    "id": "lenjer-contoh",
+    "slug": "lenjer-contoh",
+    "title": "Pempek Lenjer Goreng",
+    "variant": "Lenjer rebus dengan kulit goreng tipis",
+    "regionId": "palembang",
+    "origin": "Palembang, Sumatra Selatan",
+    "dishType": "kering",
+    "mainIngredientId": "tenggiri",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 45,
+    "timeNote": "Total 70 menit mengikuti referensi; pembagian 25/45 menit merupakan perkiraan.",
+    "adaptationNote": "Versi tapioka dari RasaBunda. Cuko siap saji digunakan sebagai pelengkap; jumlah air rebusan dan minyak diperkirakan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "tenggiri",
+        "amount": 250,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "tapioka",
+        "amount": 150,
+        "unit": "gram",
+        "role": "core",
+        "note": "tambah sedikit untuk membentuk"
+      },
+      {
+        "ingredientId": "telur",
+        "amount": 1,
+        "unit": "butir",
+        "role": "support",
+        "note": "ambil putihnya",
+        "practicalMeasure": {
+          "amount": 35,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003706, measure 44630: putih telur ayam mentah dari 1 telur = 35 gram; kuning dan cangkang tidak dihitung.",
+          "preparation": "Pisahkan kuningnya, lalu timbang putih telur mentah saja sesuai takaran."
+        }
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 3,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 9.45,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "kaldu",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 3.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh gula = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "air",
+        "amount": 1100,
+        "unit": "ml",
+        "role": "support",
+        "note": "100 ml dingin untuk adonan, sisanya untuk merebus"
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 500,
+        "unit": "ml",
+        "role": "support",
+        "note": "untuk menggoreng, tidak seluruhnya terserap"
+      },
+      {
+        "ingredientId": "cuko",
+        "amount": 150,
+        "unit": "ml",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "timun",
+        "amount": 1,
+        "unit": "buah",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 213,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003323, measure 47453: mentimun sedang mentah = 213 gram; ukuran lokal dapat berbeda."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Buat adonan",
+        "instruction": "Haluskan ikan. Aduk dengan putih telur, bawang, garam, kaldu, gula dan air dingin. Tambahkan tapioka bertahap.",
+        "ingredientIds": [
+          "tenggiri",
+          "telur",
+          "bawang-putih",
+          "garam",
+          "kaldu",
+          "gula",
+          "air",
+          "tapioka"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Bentuk lenjer",
+        "instruction": "Taburi tangan dan papan dengan sedikit tapioka. Gulung adonan menjadi silinder kecil dengan ketebalan merata.",
+        "ingredientIds": [
+          "tapioka"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Rebus",
+        "instruction": "Didihkan air. Rebus lenjer sampai mengapung dan matang hingga tengah, kemudian tiriskan dan dinginkan.",
+        "ingredientIds": [
+          "air"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Goreng dan sajikan",
+        "instruction": "Potong lenjer, goreng dengan api sedang hingga permukaannya keemasan. Hidangkan bersama timun dan cuko.",
+        "ingredientIds": [
+          "minyak",
+          "timun",
+          "cuko"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Lenjer dikenali dari bentuk memanjang. Pempek berbahan ikan dari Palembang biasa disandingkan dengan cuko yang asam dan pedas.",
+      "sourceIds": [
+        "travel-pempek"
+      ]
+    },
+    "sourceIds": [
+      "rb-lenjer"
+    ],
+    "image": {
+      "path": "/images/recipes/pempek-lenjer.webp",
+      "alt": "Ilustrasi AI Pempek Lenjer Goreng",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 2
+  },
+  {
+    "id": "rendang",
+    "slug": "rendang",
+    "title": "Rendang",
+    "variant": "Daging sapi, santan, dan waktu yang panjang",
+    "regionId": "padang",
+    "origin": "Minangkabau, Sumatra Barat",
+    "dishType": "kering",
+    "mainIngredientId": "sapi",
+    "servings": 4,
+    "prepMinutes": 30,
+    "cookMinutes": 240,
+    "timeNote": "Perkiraan adaptasi: 30 menit persiapan + 4 jam memasak; tingkat kekeringan dapat membutuhkan lebih lama.",
+    "adaptationNote": "Komposisi diadaptasi dari Sasa dan proses panjang Indonesia Travel; santan serta garam disesuaikan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "sapi",
+        "amount": 600,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "santan",
+        "amount": 1000,
+        "unit": "ml",
+        "role": "core",
+        "note": "500 ml santan kental + 500 ml santan encer"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 500,
+        "unit": "ml",
+        "role": "support",
+        "note": "tambahkan bertahap bila perlu"
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 30,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 25,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "cabai-merah",
+        "amount": 125,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 50,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 15,
+        "unit": "gram",
+        "role": "support"
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 3,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 8,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 5.2,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "daun-kunyit",
+        "amount": 1,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kayu-manis",
+        "amount": 5,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "cengkih",
+        "amount": 5,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 0.856,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "clove-dry-weight"
+          ],
+          "reference": "Tabel 2: 100 bunga cengkeh kering Cikelet = 17,12 gram; acuan perkiraan bunga kering utuh.",
+          "preparation": "Timbang cengkih kering utuh dengan timbangan rempah; jangan membulatkan jumlah kecil menjadi satu gram."
+        }
+      },
+      {
+        "ingredientId": "pala",
+        "amount": 0.25,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.015,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "nutmeg-kernel-weight"
+          ],
+          "reference": "Acuan sampel biji pala kering tanpa tempurung 4,06 gram per biji: Jayashree & Joseph (2022), Tabel 1b, pengeringan mekanis 45°C. Ukuran biji dan kadar air dapat berbeda; ini padanan perkiraan, bukan bobot universal.",
+          "preparation": "Timbang bagian biji pala kering tanpa tempurung, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "kapulaga",
+        "amount": 5,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.5165,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "cardamom-dry-weight"
+          ],
+          "reference": "Penelitian kapulaga Jawa lokal putih: 100 buah kering = 30,33 gram; bukan berat biji tanpa kulit, ukuran bervariasi.",
+          "preparation": "Gunakan kapulaga Jawa kering utuh, lalu timbang sebelum disiapkan sesuai resep."
+        }
+      },
+      {
+        "ingredientId": "bunga-lawang",
+        "amount": 2,
+        "unit": "buah",
+        "role": "support"
+      },
+      {
+        "ingredientId": "asam-kandis",
+        "amount": 1,
+        "unit": "keping",
+        "role": "support"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 1,
+        "unit": "sdm",
+        "role": "support"
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Siapkan bumbu",
+        "instruction": "Potong daging cukup besar. Haluskan bawang, cabai, lengkuas dan jahe. Memarkan serai.",
+        "ingredientIds": [
+          "sapi",
+          "bawang-merah",
+          "bawang-putih",
+          "cabai-merah",
+          "lengkuas",
+          "jahe",
+          "serai"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Mulai memasak",
+        "instruction": "Tumis bumbu. Masukkan daging, santan, air, garam dan seluruh rempah. Didihkan perlahan sambil diaduk.",
+        "ingredientIds": [
+          "minyak",
+          "sapi",
+          "santan",
+          "air",
+          "garam",
+          "daun-jeruk",
+          "daun-kunyit",
+          "daun-salam",
+          "kayu-manis",
+          "cengkih",
+          "pala",
+          "kapulaga",
+          "bunga-lawang",
+          "asam-kandis"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Kecilkan api",
+        "instruction": "Masak perlahan sekitar empat jam. Aduk sampai dasar wajan secara berkala; tambah sedikit air bila daging belum empuk.",
+        "ingredientIds": [
+          "air"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Keringkan bumbu",
+        "instruction": "Saat mengental, aduk lebih sering hingga daging empuk dan bumbu cokelat gelap melekat. Hentikan sebelum gosong.",
+        "ingredientIds": []
+      }
+    ],
+    "culture": {
+      "summary": "Dalam tradisi Minangkabau, santan dan rempah dimasak lama sampai mengering. Tahap rendang lebih gelap dan kering dibanding kalio.",
+      "sourceIds": [
+        "travel-rendang"
+      ]
+    },
+    "sourceIds": [
+      "sasa-rendang",
+      "travel-rendang"
+    ],
+    "image": {
+      "path": "/images/recipes/rendang.webp",
+      "alt": "Foto rendang Padang oleh Midori",
+      "sourceId": "midori-rendang",
+      "license": "Foto: Midori, CC BY 3.0; diperkecil dan dikompresi, pembingkaian menyesuaikan kartu."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "gulai-ayam",
+    "slug": "gulai-ayam",
+    "title": "Gulai Ayam",
+    "variant": "Ayam dalam kuah santan berempah",
+    "regionId": "padang",
+    "origin": "Minangkabau, Sumatra Barat",
+    "dishType": "berkuah",
+    "mainIngredientId": "ayam",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 60,
+    "timeNote": "Sumber menyebut 20 menit persiapan dan 60 menit memasak. Ayam kampung dapat memerlukan waktu tambahan.",
+    "adaptationNote": "Adaptasi Royco dengan kaldu bubuk generik; ukur dan sesuaikan rasa sesuai kemasan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "ayam",
+        "amount": 1,
+        "unit": "ekor",
+        "role": "core",
+        "note": "ayam kampung, potong enam",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "potong",
+          "mode": "always",
+          "approximate": false,
+          "sourceIds": [
+            "royco-gulai"
+          ],
+          "reference": "Sumber resep membagi jumlah asal menjadi enam potong untuk enam porsi.",
+          "preparation": "Ayam asal satu ekor dibagi enam bagian sesuai sumber."
+        }
+      },
+      {
+        "ingredientId": "santan",
+        "amount": 1000,
+        "unit": "ml",
+        "role": "core",
+        "note": "500 ml encer, 500 ml kental"
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 3,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-kunyit",
+        "amount": 1,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 5,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 3.25,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 4,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "asam",
+        "amount": 1,
+        "unit": "sdm",
+        "role": "support",
+        "note": "larutkan dengan sedikit air"
+      },
+      {
+        "ingredientId": "kaldu",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "note": "sesuaikan garam"
+      },
+      {
+        "ingredientId": "cabai-merah",
+        "amount": 10,
+        "unit": "buah",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 122.5,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F002901, measure 47433: cabai merah mentah = 12,25 gram; varietas dan ukuran cabai lokal dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 10,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 54.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 5,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 15.75,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 2,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 4,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 4,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 10.4,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 2,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 12,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 0.5,
+        "unit": "sdm",
+        "role": "support"
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Siapkan ayam dan rempah",
+        "instruction": "Potong ayam. Sangrai kemiri, lalu haluskan bersama cabai, bawang, jahe, kunyit, garam dan gula.",
+        "ingredientIds": [
+          "ayam",
+          "kemiri",
+          "cabai-merah",
+          "bawang-merah",
+          "bawang-putih",
+          "jahe",
+          "kunyit",
+          "garam",
+          "gula"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Rebus santan encer",
+        "instruction": "Panaskan santan encer dengan bumbu halus, serai, lengkuas serta daun kunyit dan jeruk. Aduk sampai mendidih perlahan.",
+        "ingredientIds": [
+          "santan",
+          "serai",
+          "lengkuas",
+          "daun-kunyit",
+          "daun-jeruk"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Masak ayam",
+        "instruction": "Masukkan ayam, asam dan kaldu. Tambahkan santan kental, masak dengan api kecil sambil diaduk sesekali sampai ayam matang dan empuk.",
+        "ingredientIds": [
+          "ayam",
+          "asam",
+          "kaldu",
+          "santan"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Periksa kuah",
+        "instruction": "Sesuaikan rasa. Kuah tetap berkuah, jangan dimasak sampai kering. Sajikan hangat.",
+        "ingredientIds": []
+      }
+    ],
+    "culture": {
+      "summary": "Gulai ayam menghadirkan kuah santan dengan aroma serai, kunyit dan rempah. Versi ini mengikuti gaya sajian rumah makan Padang.",
+      "sourceIds": [
+        "royco-gulai"
+      ]
+    },
+    "sourceIds": [
+      "royco-gulai"
+    ],
+    "image": {
+      "path": "/images/recipes/gulai-ayam.webp",
+      "alt": "Ilustrasi AI Gulai Ayam",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "dendeng-balado",
+    "slug": "dendeng-balado",
+    "title": "Dendeng Balado",
+    "variant": "Irisan sapi dengan balado tumbuk kasar",
+    "regionId": "padang",
+    "origin": "Minangkabau, Sumatra Barat",
+    "dishType": "kering",
+    "mainIngredientId": "sapi",
+    "servings": 3,
+    "prepMinutes": 20,
+    "cookMinutes": 70,
+    "timeNote": "Perkiraan adaptasi: 20 menit persiapan + 70 menit memasak, termasuk marinasi dan perebusan.",
+    "adaptationNote": "Adaptasi RasaBunda tanpa penyedap; air kelapa, air, garam dan porsi diukur sebagai perkiraan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "sapi",
+        "amount": 350,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 3,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 9.45,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "ketumbar",
+        "amount": 1,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 1,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "air-kelapa",
+        "amount": 500,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 250,
+        "unit": "ml",
+        "role": "support",
+        "note": "tambahkan bila rebusan menyusut"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 250,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "cabai-merah",
+        "amount": 20,
+        "unit": "buah",
+        "role": "core",
+        "practicalMeasure": {
+          "amount": 245.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F002901, measure 47433: cabai merah mentah = 12,25 gram; varietas dan ukuran cabai lokal dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 12,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 64.8,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 3,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.95,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "asam",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "support",
+        "note": "air asam jawa"
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Bumbui daging",
+        "instruction": "Iris daging tipis. Balurkan bawang putih, ketumbar, jahe dan sebagian garam. Diamkan 15 menit.",
+        "ingredientIds": [
+          "sapi",
+          "bawang-putih",
+          "ketumbar",
+          "jahe",
+          "garam"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Rebus dan pipihkan",
+        "instruction": "Rebus bersama air kelapa dan salam sampai empuk; tambah air bila perlu. Tiriskan lalu pipihkan hati-hati.",
+        "ingredientIds": [
+          "air-kelapa",
+          "daun-salam",
+          "air"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Goreng",
+        "instruction": "Goreng daging dalam minyak panas sampai permukaannya kering, lalu tiriskan.",
+        "ingredientIds": [
+          "minyak",
+          "sapi"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Buat balado",
+        "instruction": "Layu-kan cabai dan bawang merah, tumbuk kasar. Tumis bersama daun jeruk, sisa garam dan air asam sampai matang. Sajikan di atas daging.",
+        "ingredientIds": [
+          "cabai-merah",
+          "bawang-merah",
+          "daun-jeruk",
+          "garam",
+          "asam"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Dendeng balado dikenal dalam kuliner Sumatra Barat. Sambal cabai tumbuk kasar memberi lapisan pedas pada irisan daging yang digoreng.",
+      "sourceIds": [
+        "rb-dendeng"
+      ]
+    },
+    "sourceIds": [
+      "rb-dendeng"
+    ],
+    "image": {
+      "path": "/images/recipes/dendeng-balado.webp",
+      "alt": "Ilustrasi AI Dendeng Balado",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "rawon",
+    "slug": "rawon",
+    "title": "Rawon",
+    "variant": "Kuah gelap kluwek dengan daging sapi",
+    "regionId": "jawa",
+    "origin": "Jawa Timur",
+    "dishType": "berkuah",
+    "mainIngredientId": "sapi",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 95,
+    "timeNote": "Total 120 menit mengikuti sumber; pembagian 25/95 menit diperkirakan.",
+    "adaptationNote": "Adaptasi ringkas Sasa tanpa MSG tambahan; pelengkap dipilih sebagian. Gunakan kluwek siap masak. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "sapi",
+        "amount": 500,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "kluwek",
+        "amount": 7,
+        "unit": "buah",
+        "role": "core",
+        "note": "gunakan kluwek matang fermentasi siap masak, bukan biji mentah"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 2000,
+        "unit": "ml",
+        "role": "support",
+        "note": "tambah untuk rebusan awal"
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 2,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 5,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 5,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 3.25,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 15,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 81.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 10,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 31.5,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 4,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 10.4,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 4,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "ketumbar",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jintan",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 50,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "merica",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 2,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 12,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh gula = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "kaldu",
+        "amount": 3,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "tauge",
+        "amount": 100,
+        "unit": "gram",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "telur-asin",
+        "amount": 2,
+        "unit": "butir",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "daun-bawang",
+        "amount": 1,
+        "unit": "batang",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 15,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F006250, measure 47656: 1 batang spring onion mentah = 15 gram; ukuran dapat berbeda."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Rebus sapi",
+        "instruction": "Rebus daging sekitar 40 menit. Buang air rebusan awal, potong daging dan siapkan air baru.",
+        "ingredientIds": [
+          "sapi",
+          "air"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Haluskan bumbu",
+        "instruction": "Ambil isi kluwek siap masak. Haluskan dengan bawang, kemiri sangrai, kunyit, ketumbar dan jintan.",
+        "ingredientIds": [
+          "kluwek",
+          "bawang-merah",
+          "bawang-putih",
+          "kemiri",
+          "kunyit",
+          "ketumbar",
+          "jintan"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Tumis dan rebus",
+        "instruction": "Tumis bumbu bersama serai, lengkuas dan daun jeruk hingga matang. Masukkan ke rebusan baru bersama daging dan penyedap. Masak sampai empuk.",
+        "ingredientIds": [
+          "minyak",
+          "serai",
+          "lengkuas",
+          "daun-jeruk",
+          "sapi",
+          "air",
+          "garam",
+          "merica",
+          "gula",
+          "kaldu"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Sajikan",
+        "instruction": "Periksa rasa. Sajikan kuah panas dengan tauge yang telah dicuci, telur asin dan daun bawang.",
+        "ingredientIds": [
+          "tauge",
+          "telur-asin",
+          "daun-bawang"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Rawon berasal dari Jawa Timur. Kluwek memberi warna gelap khas pada kuah dagingnya; tauge pendek biasa menjadi pelengkap.",
+      "sourceIds": [
+        "travel-rawon"
+      ]
+    },
+    "sourceIds": [
+      "sasa-rawon"
+    ],
+    "image": {
+      "path": "/images/recipes/rawon.webp",
+      "alt": "Ilustrasi AI Rawon",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "soto-lamongan",
+    "slug": "soto-lamongan",
+    "title": "Soto Lamongan",
+    "variant": "Kuah kuning, ayam suwir, dan koya",
+    "regionId": "jawa",
+    "origin": "Lamongan, Jawa Timur",
+    "dishType": "berkuah",
+    "mainIngredientId": "ayam",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 45,
+    "timeNote": "Perkiraan adaptasi: 20 menit persiapan + 45 menit memasak; sumber tidak memberi durasi.",
+    "adaptationNote": "Adaptasi resep Disbudporapar Lamongan; jumlah pelengkap serta porsi diperkirakan. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "ayam",
+        "amount": 500,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 1500,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 2,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 3,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.95,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 5,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 15.75,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 6,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 32.4,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 3,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 7.8,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 2,
+        "unit": "cm",
+        "role": "core"
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 1,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "merica",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 3.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh gula = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "soun",
+        "amount": 50,
+        "unit": "gram",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "kol",
+        "amount": 100,
+        "unit": "gram",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "telur",
+        "amount": 2,
+        "unit": "butir",
+        "role": "optional",
+        "note": "rebus matang",
+        "practicalMeasure": {
+          "amount": 94,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003721, measure 44618: 1 telur ayam rebus matang tanpa cangkang = 47 gram.",
+          "preparation": "Rebus telur sampai matang dan kupas, lalu timbang bagian yang diperlukan."
+        }
+      },
+      {
+        "ingredientId": "kerupuk-udang",
+        "amount": 30,
+        "unit": "gram",
+        "role": "optional",
+        "note": "untuk koya"
+      },
+      {
+        "ingredientId": "bawang-putih-goreng",
+        "amount": 1,
+        "unit": "sdm",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "jeruk-nipis",
+        "amount": 1,
+        "unit": "buah",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 71,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F005199, measure 44319: 1 lime tanpa kulit = 71 gram; acuan bagian buah, bukan volume sari perasan."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Buat kaldu",
+        "instruction": "Rebus ayam dalam air sampai matang. Angkat, suwir dan simpan kuahnya.",
+        "ingredientIds": [
+          "ayam",
+          "air"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Tumis bumbu",
+        "instruction": "Sangrai kemiri, haluskan bersama bawang, kunyit, jahe dan merica. Tumis dengan minyak, serai, salam dan daun jeruk.",
+        "ingredientIds": [
+          "kemiri",
+          "bawang-putih",
+          "bawang-merah",
+          "kunyit",
+          "jahe",
+          "merica",
+          "minyak",
+          "serai",
+          "daun-salam",
+          "daun-jeruk"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Satukan kuah",
+        "instruction": "Masukkan tumisan ke kaldu. Tambahkan garam dan gula, didihkan lalu kecilkan api sampai aroma menyatu.",
+        "ingredientIds": [
+          "garam",
+          "gula"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Racik mangkuk",
+        "instruction": "Seduh soun, iris kol. Haluskan kerupuk dan bawang putih goreng untuk koya. Susun ayam, soun, kol dan telur; siram kuah, taburkan koya.",
+        "ingredientIds": [
+          "soun",
+          "kol",
+          "kerupuk-udang",
+          "bawang-putih-goreng",
+          "telur",
+          "jeruk-nipis"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Soto Lamongan memiliki kuah ayam kuning dan pelengkap koya dari kerupuk udang serta bawang. Sajian ini membawa nama daerah asalnya di Jawa Timur.",
+      "sourceIds": [
+        "lamongan-soto"
+      ]
+    },
+    "sourceIds": [
+      "lamongan-soto"
+    ],
+    "image": {
+      "path": "/images/recipes/soto-lamongan.webp",
+      "alt": "Ilustrasi AI Soto Lamongan",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "gudeg",
+    "slug": "gudeg",
+    "title": "Gudeg",
+    "variant": "Nangka muda dimasak perlahan dengan santan",
+    "regionId": "jawa",
+    "origin": "Yogyakarta",
+    "dishType": "kering",
+    "mainIngredientId": "nangka-muda",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 180,
+    "timeNote": "Perkiraan adaptasi: 25 menit persiapan + 3 jam memasak untuk versi cukup kering; lama aktual bergantung nangka dan api.",
+    "adaptationNote": "Adaptasi nangka tanpa ayam, daun jati, terasi atau krecek; santan dan gula disesuaikan. Bukan paket gudeg komplet. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "nangka-muda",
+        "amount": 1000,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "santan",
+        "amount": 1500,
+        "unit": "ml",
+        "role": "core",
+        "note": "1 liter encer, 500 ml kental"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 1000,
+        "unit": "ml",
+        "role": "support",
+        "note": "untuk merebus awal"
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 3,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 5,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 6,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 32.4,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 4,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 12.6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "ketumbar",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 6,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 15.6,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "gula-merah",
+        "amount": 100,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "telur",
+        "amount": 6,
+        "unit": "butir",
+        "role": "optional",
+        "note": "rebus dan kupas",
+        "practicalMeasure": {
+          "amount": 282,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F003721, measure 44618: 1 telur ayam rebus matang tanpa cangkang = 47 gram.",
+          "preparation": "Rebus telur sampai matang dan kupas, lalu timbang bagian yang diperlukan."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Rebus nangka",
+        "instruction": "Potong nangka muda, cuci, lalu rebus hingga mulai lunak. Tiriskan.",
+        "ingredientIds": [
+          "nangka-muda",
+          "air"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Tumis bumbu",
+        "instruction": "Sangrai kemiri dan haluskan bersama bawang serta ketumbar. Tumis sampai matang.",
+        "ingredientIds": [
+          "kemiri",
+          "bawang-merah",
+          "bawang-putih",
+          "ketumbar",
+          "minyak"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Masak perlahan",
+        "instruction": "Masukkan nangka, santan encer, salam, lengkuas, gula merah dan garam. Gunakan api kecil hingga lunak dan kuah menyusut.",
+        "ingredientIds": [
+          "nangka-muda",
+          "santan",
+          "daun-salam",
+          "lengkuas",
+          "gula-merah",
+          "garam"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Pekatkan",
+        "instruction": "Tambahkan santan kental dan telur rebus bila dipakai. Lanjutkan sampai bumbu meresap dan cukup kering; aduk perlahan agar tidak hangus.",
+        "ingredientIds": [
+          "santan",
+          "telur"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Gudeg lekat dengan Yogyakarta. Nangka muda, santan dan gula merah dimasak perlahan menjadi lauk dengan rasa manis gurih.",
+      "sourceIds": [
+        "jogja-gudeg"
+      ]
+    },
+    "sourceIds": [
+      "sasa-gudeg"
+    ],
+    "image": {
+      "path": "/images/recipes/gudeg.webp",
+      "alt": "Ilustrasi AI Gudeg",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "coto-makassar",
+    "slug": "coto-makassar",
+    "title": "Coto Makassar",
+    "variant": "Kuah kacang sangrai, versi rumahan bersantan",
+    "regionId": "makassar",
+    "origin": "Makassar, Sulawesi Selatan",
+    "dishType": "berkuah",
+    "mainIngredientId": "sapi",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 105,
+    "timeNote": "Perkiraan adaptasi: 25 menit persiapan + 105 menit memasak; sesuaikan sampai daging empuk.",
+    "adaptationNote": "Versi rumahan Sasa memakai santan, tanpa jeroan; bukan klaim formula tradisional tunggal. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "sapi",
+        "amount": 500,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 2000,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "santan",
+        "amount": 200,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kacang-tanah",
+        "amount": 5,
+        "unit": "sdm",
+        "role": "core",
+        "note": "sangrai dan haluskan"
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 6,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 18.9,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 8,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 43.2,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 2,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 4,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 10.4,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 2,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 2,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 2,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "ketumbar",
+        "amount": 1,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jintan",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "merica",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-jeruk",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.3,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 lembar daun jeruk purut = 1,3 gram."
+        }
+      },
+      {
+        "ingredientId": "kayu-manis",
+        "amount": 3,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 3.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh gula = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "ketupat",
+        "amount": 4,
+        "unit": "buah",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "tauco",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "optional"
+      },
+      {
+        "ingredientId": "daun-bawang",
+        "amount": 1,
+        "unit": "batang",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 15,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F006250, measure 47656: 1 batang spring onion mentah = 15 gram; ukuran dapat berbeda."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Rebus daging",
+        "instruction": "Rebus sapi hingga empuk, saring kaldunya dan potong daging kecil-kecil.",
+        "ingredientIds": [
+          "sapi",
+          "air"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Tumis rempah",
+        "instruction": "Haluskan bawang, serai, kemiri sangrai, jahe, lengkuas, kunyit, ketumbar, jintan dan merica. Tumis dengan minyak, salam, daun jeruk dan kayu manis.",
+        "ingredientIds": [
+          "bawang-putih",
+          "bawang-merah",
+          "serai",
+          "kemiri",
+          "jahe",
+          "lengkuas",
+          "kunyit",
+          "ketumbar",
+          "jintan",
+          "merica",
+          "minyak",
+          "daun-salam",
+          "daun-jeruk",
+          "kayu-manis"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Kentalkan kuah",
+        "instruction": "Masukkan bumbu ke kaldu bersama kacang sangrai, santan dan daging. Rebus perlahan, bumbui garam serta gula.",
+        "ingredientIds": [
+          "kacang-tanah",
+          "santan",
+          "sapi",
+          "garam",
+          "gula"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Hidangkan",
+        "instruction": "Sajikan setelah bumbu menyatu. Tambahkan daun bawang; ketupat dan tauco disediakan terpisah.",
+        "ingredientIds": [
+          "daun-bawang",
+          "ketupat",
+          "tauco"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Coto Makassar memakai rempah dan kacang tanah sangrai untuk kuah yang pekat. Ketupat atau buras sering menjadi teman makannya.",
+      "sourceIds": [
+        "travel-coto"
+      ]
+    },
+    "sourceIds": [
+      "sasa-coto"
+    ],
+    "image": {
+      "path": "/images/recipes/coto-makassar.webp",
+      "alt": "Ilustrasi AI Coto Makassar",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "sop-konro",
+    "slug": "sop-konro",
+    "title": "Sop Konro",
+    "variant": "Iga sapi dalam kuah kluwek berempah",
+    "regionId": "makassar",
+    "origin": "Makassar, Sulawesi Selatan",
+    "dishType": "berkuah",
+    "mainIngredientId": "iga-sapi",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 135,
+    "timeNote": "Perkiraan adaptasi: 25 menit persiapan + 135 menit memasak memakai panci biasa.",
+    "adaptationNote": "Adaptasi ringkas RasaBunda; ukuran air dan beberapa rempah diperjelas. Gunakan kluwek siap masak. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "iga-sapi",
+        "amount": 1000,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 2500,
+        "unit": "ml",
+        "role": "support",
+        "note": "tambah untuk rebusan awal"
+      },
+      {
+        "ingredientId": "asam",
+        "amount": 10,
+        "unit": "ml",
+        "role": "support",
+        "note": "air asam jawa"
+      },
+      {
+        "ingredientId": "gula",
+        "amount": 0.25,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.5,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh gula = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 2,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 12,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "kaldu",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 3,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "serai",
+        "amount": 6,
+        "unit": "batang",
+        "role": "support"
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 3,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "cengkih",
+        "amount": 5,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 0.856,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "clove-dry-weight"
+          ],
+          "reference": "Tabel 2: 100 bunga cengkeh kering Cikelet = 17,12 gram; acuan perkiraan bunga kering utuh.",
+          "preparation": "Timbang cengkih kering utuh dengan timbangan rempah; jangan membulatkan jumlah kecil menjadi satu gram."
+        }
+      },
+      {
+        "ingredientId": "kapulaga",
+        "amount": 5,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.5165,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "cardamom-dry-weight"
+          ],
+          "reference": "Penelitian kapulaga Jawa lokal putih: 100 buah kering = 30,33 gram; bukan berat biji tanpa kulit, ukuran bervariasi.",
+          "preparation": "Gunakan kapulaga Jawa kering utuh, lalu timbang sebelum disiapkan sesuai resep."
+        }
+      },
+      {
+        "ingredientId": "kayu-manis",
+        "amount": 5,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 3,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 4,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 12,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 64.8,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 7,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 22.05,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "kluwek",
+        "amount": 6,
+        "unit": "buah",
+        "role": "core",
+        "note": "kluwek matang fermentasi siap masak, bukan biji mentah"
+      },
+      {
+        "ingredientId": "ketumbar",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kemiri",
+        "amount": 3,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 7.8,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 biji kemiri untuk bumbu = 5,2 gram; berat isi, bukan biji bercangkang.",
+          "preparation": "Timbang kemiri kupas, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "jintan",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "merica",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 2,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "pala",
+        "amount": 1,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 4.06,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "nutmeg-kernel-weight"
+          ],
+          "reference": "Acuan sampel biji pala kering tanpa tempurung 4,06 gram per biji: Jayashree & Joseph (2022), Tabel 1b, pengeringan mekanis 45°C. Ukuran biji dan kadar air dapat berbeda; ini padanan perkiraan, bukan bobot universal.",
+          "preparation": "Timbang bagian biji pala kering tanpa tempurung, lalu siapkan sesuai langkah resep."
+        }
+      },
+      {
+        "ingredientId": "daun-bawang",
+        "amount": 1,
+        "unit": "batang",
+        "role": "optional",
+        "practicalMeasure": {
+          "amount": 15,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "fsanz-measures"
+          ],
+          "reference": "AUSNUT F006250, measure 47656: 1 batang spring onion mentah = 15 gram; ukuran dapat berbeda."
+        }
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Siapkan iga",
+        "instruction": "Rebus iga sebentar, buang air awal. Dengan air baru, rebus bersama sebagian serai, salam, cengkih, kapulaga, kayu manis, lengkuas dan jahe.",
+        "ingredientIds": [
+          "iga-sapi",
+          "air",
+          "serai",
+          "daun-salam",
+          "cengkih",
+          "kapulaga",
+          "kayu-manis",
+          "lengkuas",
+          "jahe"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Haluskan bumbu",
+        "instruction": "Haluskan bawang, isi kluwek siap masak, sisa serai dan jahe, ketumbar, kemiri sangrai, jintan, merica, kunyit serta pala.",
+        "ingredientIds": [
+          "bawang-merah",
+          "bawang-putih",
+          "kluwek",
+          "serai",
+          "jahe",
+          "ketumbar",
+          "kemiri",
+          "jintan",
+          "merica",
+          "kunyit",
+          "pala"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Tumis dan satukan",
+        "instruction": "Masak bumbu dengan minyak sampai matang. Masukkan ke panci bersama air asam, garam, gula dan kaldu.",
+        "ingredientIds": [
+          "minyak",
+          "asam",
+          "garam",
+          "gula",
+          "kaldu"
+        ]
+      },
+      {
+        "order": 4,
+        "title": "Rebus sampai empuk",
+        "instruction": "Lanjutkan dengan api kecil sampai iga empuk dan kuah meresap. Periksa air dan rasa; taburi daun bawang.",
+        "ingredientIds": [
+          "air",
+          "daun-bawang"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Sop konro adalah sajian iga berkuah khas Makassar. Rempah dan kluwek membentuk kuahnya yang berwarna cokelat gelap.",
+      "sourceIds": [
+        "rb-konro"
+      ]
+    },
+    "sourceIds": [
+      "rb-konro"
+    ],
+    "image": {
+      "path": "/images/recipes/sop-konro.webp",
+      "alt": "Ilustrasi AI Sop Konro",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  },
+  {
+    "id": "konro-bakar",
+    "slug": "konro-bakar",
+    "title": "Konro Bakar",
+    "variant": "Iga berbumbu, direbus lalu dibakar",
+    "regionId": "makassar",
+    "origin": "Makassar, Sulawesi Selatan",
+    "dishType": "kering",
+    "mainIngredientId": "iga-sapi",
+    "servings": 3,
+    "prepMinutes": 25,
+    "cookMinutes": 140,
+    "timeNote": "Perkiraan adaptasi: 25 menit persiapan + 140 menit merebus dan memanggang.",
+    "adaptationNote": "Adaptasi resep Tastemade Indonesia. Sambal kacang memakai produk siap saji; bukan resep saus buatan sendiri. Belum diuji memasak langsung.",
+    "equipment": [
+      "Panci",
+      "Wajan",
+      "Pisau dan talenan",
+      "Ulekan atau blender",
+      "Panggangan atau wajan panggang"
+    ],
+    "ingredients": [
+      {
+        "ingredientId": "iga-sapi",
+        "amount": 750,
+        "unit": "gram",
+        "role": "core"
+      },
+      {
+        "ingredientId": "air",
+        "amount": 2000,
+        "unit": "ml",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jahe",
+        "amount": 1,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "lengkuas",
+        "amount": 3,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kayu-manis",
+        "amount": 3,
+        "unit": "cm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "cengkih",
+        "amount": 7,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 1.1984,
+          "unit": "gram",
+          "mode": "always",
+          "approximate": true,
+          "sourceIds": [
+            "clove-dry-weight"
+          ],
+          "reference": "Tabel 2: 100 bunga cengkeh kering Cikelet = 17,12 gram; acuan perkiraan bunga kering utuh.",
+          "preparation": "Timbang cengkih kering utuh dengan timbangan rempah; jangan membulatkan jumlah kecil menjadi satu gram."
+        }
+      },
+      {
+        "ingredientId": "daun-salam",
+        "amount": 2,
+        "unit": "lembar",
+        "role": "support"
+      },
+      {
+        "ingredientId": "asam",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "support",
+        "note": "air asam jawa"
+      },
+      {
+        "ingredientId": "garam",
+        "amount": 0.5,
+        "unit": "sdt",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 3.0,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 1 sendok teh garam = 6 gram dalam formulasi acuan; padanan perkiraan, tekstur dan pengisian sendok dapat berbeda."
+        }
+      },
+      {
+        "ingredientId": "bawang-merah",
+        "amount": 6,
+        "unit": "butir",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 32.4,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 3 siung bawang merah = 16,2 gram.",
+          "preparation": "Timbang bawang merah yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "bawang-putih",
+        "amount": 2,
+        "unit": "siung",
+        "role": "support",
+        "practicalMeasure": {
+          "amount": 6.3,
+          "unit": "gram",
+          "mode": "fractional",
+          "approximate": true,
+          "sourceIds": [
+            "patpi-urt"
+          ],
+          "reference": "PATPI hlm. 152: 2 siung bawang putih = 6,3 gram.",
+          "preparation": "Timbang bawang putih yang sudah dikupas."
+        }
+      },
+      {
+        "ingredientId": "merica",
+        "amount": 1,
+        "unit": "sdt",
+        "role": "support"
+      },
+      {
+        "ingredientId": "kluwek",
+        "amount": 2,
+        "unit": "sdm",
+        "role": "core",
+        "note": "isi kluwek matang fermentasi siap masak"
+      },
+      {
+        "ingredientId": "kunyit",
+        "amount": 0.5,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "jintan",
+        "amount": 0.5,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "minyak",
+        "amount": 3,
+        "unit": "sdm",
+        "role": "support"
+      },
+      {
+        "ingredientId": "saus-kacang",
+        "amount": 100,
+        "unit": "gram",
+        "role": "optional"
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "Siapkan bumbu",
+        "instruction": "Haluskan bawang, merica, kluwek siap masak, kunyit dan jintan. Memarkan jahe serta lengkuas.",
+        "ingredientIds": [
+          "bawang-merah",
+          "bawang-putih",
+          "merica",
+          "kluwek",
+          "kunyit",
+          "jintan",
+          "jahe",
+          "lengkuas"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Rebus iga berbumbu",
+        "instruction": "Tumis bumbu dengan minyak dan rempah. Tambahkan iga, air, asam dan garam. Rebus perlahan sampai daging empuk.",
+        "ingredientIds": [
+          "minyak",
+          "kayu-manis",
+          "cengkih",
+          "daun-salam",
+          "iga-sapi",
+          "air",
+          "asam",
+          "garam"
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Siapkan olesan",
+        "instruction": "Angkat iga. Pekatkan sebagian kuah untuk olesan, lalu panaskan panggangan atau wajan panggang.",
+        "ingredientIds": []
+      },
+      {
+        "order": 4,
+        "title": "Bakar dan sajikan",
+        "instruction": "Panggang iga sambil dibalik dan diolesi kuah pekat sampai harum. Sajikan dengan sambal kacang terpisah bila diinginkan.",
+        "ingredientIds": [
+          "iga-sapi",
+          "saus-kacang"
+        ]
+      }
+    ],
+    "culture": {
+      "summary": "Konro bakar memberi sentuhan panggang pada iga yang lebih dahulu direbus bersama bumbu. Ini berbeda dari konro yang disajikan sebagai sup.",
+      "sourceIds": [
+        "tastemade-konro"
+      ]
+    },
+    "sourceIds": [
+      "tastemade-konro"
+    ],
+    "image": {
+      "path": "/images/recipes/konro-bakar.webp",
+      "alt": "Ilustrasi AI Konro Bakar",
+      "sourceId": "ai-art",
+      "license": "Ilustrasi dibuat dengan AI untuk RasaNusantara; bukan foto hasil memasak."
+    },
+    "approvedSubstitutions": [],
+    "status": "published",
+    "review": {
+      "reviewer": "Codex — pemeriksaan sumber dan konsistensi data, bukan uji memasak",
+      "reviewedAt": "2026-10-18"
+    },
+    "version": 1
+  }
+]

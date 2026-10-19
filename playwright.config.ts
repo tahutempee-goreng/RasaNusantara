@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({ testDir: './e2e', globalSetup: './e2e/server.ts', timeout: 45000, workers: 1, use: { baseURL: 'http://127.0.0.1:3000', channel: 'chrome', headless: true }, reporter: 'list' });

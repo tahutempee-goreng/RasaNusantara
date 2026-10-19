@@ -1,0 +1,178 @@
+# Validasi akhir v16 — 19 Oktober 2026
+
+## 19 Oktober 2026 — Header dan takaran praktis (v16)
+Wordmark RasaNusantara sekarang serif lokal Cormorant 28px desktop/24px HP, navy dengan aksen geometris pendek terakota. Beranda memakai bidang kertas gading kecil berkontras tinggi di atas rempah; area header lain tetap mengikuti desain sebelumnya. Tidak menambah singkatan. Logo diperiksa pada lima bab, halaman dalam, 320/390/844/1024/1440px, menu dan fokus keyboard.
+Satu practicalQuantity dipakai detail, pratinjau langkah, Cooking Mode dan konteks server AI. Cairan tampil 750 ml, 1 liter, 1,5 liter atau 3 liter; mengikuti koreksi pengguna, tidak dipecah menjadi liter dan ml. Gram/ml berupa bilangan bulat; positif di bawah satu ditulis kurang dari 1 gram/ml. Sendok memakai bahasa dapur dan penyederhanaan ditandai sekitar. Tidak mengganti sumber menjadi secukupnya.
+Tambahan 78 metadata padanan praktis memuat unit, jumlah untuk porsi asal, mode pemakaian, sumber, alasan, persiapan dan status estimasi. Acuan PATPI, AUSNUT FSANZ, penelitian primer cengkih/kapulaga/pala dan varietas rawit. Kemiri menggunakan isi siap bumbu, pala kernel kering tanpa tempurung. Audit akhir mengoreksi calon padanan pala parut/bubuk yang tidak sebanding menjadi kernel langsung; telur putih mentah 35g, isi utuh mentah 51g, rebus kupas 47g dipisahkan. Semua angka tersebut perkiraan sampel/ukuran acuan, bukan bobot universal. Detail sumber/angka asal disimpan di Catatan resep dan RISET-TAKARAN-2026-10-19.md. Tidak ada uji memasak, reviewer atau persetujuan ahli yang diklaim.
+Bahan tanpa padanan terverifikasi mempertahankan satuan asal dengan pecahan kata, misalnya setengah lembar/tiga perempat lembar; tidak meminjam densitas bahan lain atau membulatkan semua bahan menjadi satu buah. Jumlah/unit sumber, teks prosedur dan versi resep dibandingkan terhadap snapshot sebelum v16 dan tidak berubah. API katalog tetap kompatibel: practicalMeasure opsional, schemaVersion tetap1, katalog version baru. Input pencocokan/skor tetap; source FK metadata divalidasi dan sumber konversi ikut konteks AI.
+Verifikasi akhir: 13 resep x 12 porsi = 2.664 pemformatan bahan lulus, termasuk kesamaan objek praktis dengan konteks AI, tanpa nol wajib atau desimal butir/buah, FK sumber dan katalog lama tanpa metadata. Seluruh 28 tes domain/provider/origin lulus; TypeScript dan build produksi lulus. Seluruh 74 tes Playwright lulus pada build akhir, mencakup regresi bahan saat transisi, matcher lokal/API, penyimpanan lama, AI history/error/cancel, keyboard, reduced motion, scroll/resize, video, carousel dan footer. Percakapan Gemini sungguhan tiga giliran telah diverifikasi v15; tidak diulang/diklaim sebagai panggilan live baru pada v16. Kegagalan provider v16 disimulasikan.
+Riwayat verifikasi: suite awal v16 74/74 lulus; setelah audit sumber ada satu kegagalan tes landscape karena pemeriksaan hit-target satu kali langsung setelah scroll. Asersi diperbaiki menjadi polling kondisi hit-target yang sama; tidak menghapus persyaratan dapat diklik. Kesalahan kata tiga perperempat pada iterasi formatter tertangkap tes unit dan diperbaiki menjadi tiga perempat sebelum build akhir. Koreksi bentuk telur diperiksa ulang sebelum suite akhir.
+Visual gabungan dan putaran konfirmasi: desktop1440x900, HP390x844 dan mendatar844x390, lima bab, detail/bumbu/air/Cooking Mode; masing-masing27capture tanpa pageerror/overflow. Nama berkas resep bab dan detail saling menimpa, jadi24berkas unik per putaran; bukti final tersimpan di outputs chat18Oktober. Pala/telur dikonfirmasi tambahan pada build terbaru. Launcher resmi memuat build akhir port3001. Uji pengguna/persetujuan visual dan deployment tetap tahap pengguna berikutnya. Belum uji memasak langsung atau audit lintas mesin browser/perangkat fisik.
+
+--- Riwayat; keputusan terbaru di atas berlaku ---
+# Validasi akhir v15 — 19 Oktober 2026
+
+## 19 Oktober 2026 — Ingatan AI, panel Nusantara dan pemeriksaan menyeluruh (v15)
+Enam pasangan tanya-jawab berhasil terakhir per resep disimpan di sessionStorage, mencatat langkah/porsi dan versi resep. Refresh, pergantian langkah, porsi serta bahan mempertahankan riwayat; resep terpisah, versi berbeda dan mulai ulang memasak membersihkan resep aktif. Mulai obrolan baru tidak mengubah progres memasak. Storage rusak ditangani; bila ditolak, ada fallback memori serta pemberitahuan kehilangan setelah refresh. Gagal/batal mempertahankan pertanyaan dan riwayat; perubahan konteks membatalkan request dan menolak jawaban terlambat.
+API history opsional mempertahankan kompatibilitas permintaan lama: maksimal enam pasangan, 500 karakter pertanyaan, 6.000 jawaban. Advisor64KiB, endpoint lain8KiB. Serializer memangkas pasangan tertua secara utuh pada60KiB. Gemini menerima user/model berurutan dan konteks server terkini pada systemInstruction terpisah; jawaban lama bukan sumber terverifikasi. Referensi resmi: https://ai.google.dev/api/generate-content . Key tidak dicetak, diubah, atau disalin ke hasil.
+Panel memakai judul AI Teman Dapur, navy, tekstur kertas existing, ikon percakapan dan aksen geometris menyerupai tenun. Cap RN dan gambar rempah awal ditolak pengguna karena tidak jelas/terpotong; keduanya dihapus dari header AI. Pengantar panjang/provider/disclosure di panel dihapus sesuai permintaan; Tentang tetap menjelaskan Gemini, sesi, pengiriman riwayat dan keterbatasan. Riwayat berurutan dibatasi min(55svh,480px); composer di luar gulir, respons baru fokus preventScroll. Contoh hanya mengisi input.
+Laporan pengguna pilihan kadang tidak merespons direplikasi pada transisi92% dari Resep ke Dapur. Kontrol terlihat tetapi incoming sheet masih inert. Klik Jawa sebelum fix false→false; sesudah fix pada koordinat sama false→true. Sheet yang mulai terbuka kini interaktif, yang tertutup tetap inert; fokus keyboard pada sheet berikut mengarah ke ruang bacanya. Klik isi yang terlihat menghentikan smooth scroll navigasi di posisi saat itu, tanpa tarikan balik/timer/lock. Tiga regresi khusus ditambahkan untuk maju/balik, keyboard dan interupsi smooth scroll. Pemeriksaan sesi baru serta empat ukuran layar awal tidak menangkapnya; pengujian transisi mengungkap akar masalah. Tes navigasi lama diperjelas agar menunggu bab tujuan saat memeriksa geometri setelah smooth scroll.
+Verifikasi akhir: katalog13resep valid, TypeScript dan build produksi lulus. Seluruh23tes domain/provider/origin lulus, termasuk timeout20detik nyata dengan fetcher simulasi, quota/blocked/truncated/safe-output. Seluruh71tes browser lulus pada build akhir: ingatan, refresh, konteks, versi/rusak/storage ditolak, batas6, pemisahan, reset, cancel/stale/error/origin, pencarian/API/100%/opsional, Cooking Mode, keyboard, kontras, scroll/resize/balik, video/reduced motion, carousel dan footer. Riwayat sebelum koreksi:68/68 lulus; iterasi70tes memiliki2kegagalan navigasi/timing yang diperbaiki dan diperiksa pada suite71final. Bukan klaim bahwa tes awal sudah mencakup bug transisi.
+Visual gabungan desktop1440x900, HP390x844 dan mendatar844x390 pada alur sampul→polaroid→bahan→resep→langkah→AI→malam→footer, plus reduced motion:31screenshot, issues/pageerror/overflow kosong. Revisi header dikonfirmasi tiga ukuran. Bug transisi memiliki bukti screenshot sebelum/sesudah terpisah. Matriks klik port3001 tambahan meliputi1920x1080,1440x900,390x844,844x390, empat daerah, dua jenis, semua kategori dan label bahan; kembali dari resep serta refresh juga diperiksa. Tidak menambah putaran polish tanpa temuan.
+Tiga giliran Gemini sungguhan melalui browser3001 berhasilHTTP200, riwayat yang terkirim0→1→2. AI mengingat potongan3cm/panci biru, tetap mengingat setelah refresh, dan mengenali perpindahan ke Langkah2 Mulai memasak. Pageerror kosong. Bukti INGATAN-AI-LIVE-CHECK.json dan ingatan-ai-live-berhasil.png, tanpa rahasia. Ini memverifikasi satu percakapan, bukan menjamin semua saran benar. Seluruh uji kegagalan memakai simulasi; tidak sengaja menghabiskan kuota provider.
+Launcher memuat build terbaru port3001 setelah perbaikan scroll; tab lama perlu refresh sekali. Uji pengguna dan persetujuan visual tetap pengguna, deployment tahap berikutnya. Belum uji memasak langsung, audit lintas mesin browser fisik, load test produksi atau deploy. Limiter Advisor masih per-proses, bukan limiter terdistribusi.
+
+Sinkronisasi Obsidian v15: lima dokumen dicadangkan di C:\Users\ICHSAN NURPRATAMA D\Documents\SecondBrain\Projects\RasaNusantara\Arsip-sebelum-ai-memory-v15-2026-10-19-160930; salinan akhir diverifikasi SHA-256.
+
+--- Riwayat ---
+# Validasi keterlihatan AI v14 — 19 Oktober 2026
+
+## 19 Oktober 2026 — Fitur AI lebih mudah ditemukan (v14)
+Pengguna menganggap fitur AI kurang terlihat karena seperti formulir biasa di akhir halaman. Halaman resep kini memiliki tautan Masak ditemani AI Teman Dapur yang membawa porsi pilihan ke Cooking Mode dan panel AI. Awal Cooking Mode menampilkan tombol Tanya AI; panel memakai judul AI Teman Dapur, ikon percakapan SVG, header navy, konteks resep/langkah yang jelas dan contoh pertanyaan Besar api/Tanda sudah tepat/Bahan pengganti. Contoh mengikuti langkah aktif, hanya mengisi kolom serta memfokuskan input, tidak mengirim otomatis. Pilihan contoh berikutnya membersihkan jawaban lama.
+Jawaban menampilkan pertanyaan yang benar-benar dikirim, paragraf, daftar bernomor/bullet dan penekanan tebal melalui elemen React yang aman; tidak memakai raw HTML atau pustaka tambahan. Markup berbahaya tetap menjadi teks. Informasi pengiriman ke Gemini dan pemeriksaan saran tetap terlihat; penjelasan tambahan ada pada disclosure Privasi & batasan AI. Tidak menambah modal atau mengubah API/key/skor/progres memasak.
+Pemeriksaan pertama menemukan tautan langsung hash belum mendarat setelah katalog async dimuat dan marker daftar terkena reset CSS. Keduanya diperbaiki: setelah status panel siap, tautan eksplisit #ai-teman-dapur diarahkan sekali ke panel dengan fokus input; marker list dipulihkan. Tidak ada scroll otomatis pada pergantian langkah biasa.
+Build produksi/TypeScript lulus. Final22/22 browser lulus30detik (discovery, advisor, origin, recipe-experience, journey), termasuk tombol terlihat di awal HP, contoh tidak mengirim, konteks dinamis, deep link, teks kontras minimal4,5, format aman, cancel/error/fokus, porsi dan cooking storage. Awal20/20 lulus; tambahan deep-link/contrast awal1gagal/1lulus memicu perbaikan di atas. Tidak mengklaim full suite final.
+Visual satu putaran desktop1440x900, HP390x844 dan mendatar844x390, kemudian satu konfirmasi setelah koreksi. Issues/pageerror/overflow kosong. Screenshot ai-terlihat-resep/awal/panel/jawaban-* di outputs chat lanjutan; jawaban screenshot berlabel respons simulasi dan tidak memanggil Gemini. Tidak ada request provider live tambahan pada pekerjaan UI ini. Launcher memuat build final3001. Persetujuan visual tetap dari pengguna.
+
+--- Riwayat ---
+# Validasi perbaikan origin Advisor v13
+
+## 19 Oktober 2026 — Perbaikan penolakan pertanyaan browser (v13)
+Laporan pengguna Permintaan tidak diizinkan direplikasi pada server3001: Origin http://127.0.0.1:3001 ditolak403, sementara localhost melewati pemeriksaan. Next menormalkan request.url menjadi localhost; perbandingan lama terhadap URL internal keliru untuk browser-visible Host127.0.0.1. requestOriginAllowed kini membandingkan origin terhadap protocol URL + header Host yang terlihat browser; origin asing, port/scheme berbeda, nilai malformed dan Sec-Fetch-Site cross-site tetap ditolak. Tidak menambah CORS wildcard atau menghapus pemeriksaan.
+Tes regresi juga menemukan fokus jawaban kadang dijalankan sebelum commit React. Fokus dipindah ke useEffect setelah advice tampil, dengan preventScroll. Build final/TypeScript lulus; origin/provider unit6/6 lulus. Regresi awal2lulus/1gagal fokus, sesudah perbaikan final browser advisor-origin/advisor6/6 lulus6,8detik.
+Launcher3001 memuat build final. Satu pertanyaan sungguhan dikirim melalui tombol browser di http://127.0.0.1:3001/masak/rendang?porsi=4 pada langkah3 Kecilkan api; HTTP200/statusok, pageerror kosong. Screenshot advisor-browser-berhasil.png memperlihatkan jawaban provider sungguhan. Pemeriksaan tambahan dengan pertanyaan kosong dan Origin127.0.0.1 kini400 INVALID_INPUT (lolos origin), origin asing tetap403 INVALID_ORIGIN; dua pemeriksaan ini tidak memanggil provider. Uji live sebelum v13 lewat skrip tanpa Origin belum menangkap bug ini. Key tidak diubah/ditampilkan.
+
+--- Riwayat ---
+# Verifikasi koneksi Gemini live — 19 Oktober 2026
+
+## 19 Oktober 2026 — Koneksi Gemini sungguhan terverifikasi (v12 live)
+Pengguna menyimpan key pada baris GEMINI_MODEL dan menghilangkan baris GEMINI_API_KEY. Diagnosis hanya mencatat bentuk baris/boolean, tanpa mencetak nilai. Key dipindahkan ke GEMINI_API_KEY; GEMINI_MODEL dikembalikan ke gemini-3.5-flash-lite. Launcher mendeteksi perubahan konfigurasi dan memuat ulang server3001.
+GET /api/advisor enabled=true. Satu POST sungguhan melalui server lokal ke Gemini menghasilkan HTTP200/status ok, konteks recipeId=rendang, porsi2, stepIndex2 (Kecilkan api). Pertanyaan: daging masih keras pada langkah kecilkan api. Jawaban membahas api kecil, kondisi cairan, ukuran potongan dan meminta kondisi lebih lanjut, serta menandai saran sebagai adaptasi AI. Tidak ada request provider tambahan atau perubahan kode/build pada sesi ini. Hasil ini memverifikasi satu koneksi dan konteks, bukan jaminan semua saran akurat. Tidak ada key disalin ke log/catatan/outputs. Catatan menunggu key pada entri v12 sebelumnya kini terlewati.
+
+--- Riwayat ---
+# Validasi integrasi Gemini v12 — 19 Oktober 2026
+
+## 19 Oktober 2026 — Integrasi Gemini Advisor v12 (menunggu key di file)
+Pengguna memilih Google AI Studio. Integrasi REST Gemini server-only dipasang di /api/advisor, default gemini-3.5-flash-lite sesuai daftar model resmi https://ai.google.dev/gemini-api/docs/models dan kontrak https://ai.google.dev/api/generate-content . Tidak menambahkan SDK. Key hanya di .env.local, tidak memakai NEXT_PUBLIC dan tidak disalin ke dokumentasi. Key yang sempat ditulis pengguna di komentar chat diminta dicabut/diganti. Pemeriksaan akhir hanya boolean: key_present=false, AI_ENABLED=true; GET lokal enabled=false. Artinya belum ada key tersimpan pada file asli saat verifikasi. Tidak ada panggilan Gemini sungguhan; koneksi provider menunggu key pengganti disimpan pengguna.
+Server membangun ulang konteks resep dari katalog berdasarkan ID: langkah aktif, porsi, bahan dengan takaran disesuaikan, kepemilikan bahan, alergen, alat dan sumber. Validasi 200 bahan/500 karakter, porsi1–12 dan langkah valid. Skor/pantry/progres tidak diubah AI. Prompt membatasi peran dan mengakui AI tidak melihat masakan; jawaban teks biasa, referensi resep berasal dari server, tidak mengklaim saran terverifikasi. Timeout20detik; kegagalan/kuota/credential/blocked/truncated ditangani tanpa mengirim diagnostik provider atau key. Batas dasar satu proses: maksimal2 request bersamaan dan30 per10menit. Ini belum limiter terdistribusi atau autentikasi untuk deployment publik.
+UI Cooking Mode menampilkan konteks, pertanyaan, disclosure pengiriman ke Google, loading, batal, error/retry manual dan jawaban. Request/jawaban lama dibuang ketika konteks berubah. Tidak menyimpan percakapan AI pada browser. Halaman tentang memperbarui penjelasan data. Launcher tetap3001 dan kini mendeteksi mtime file env agar konfigurasi baru memulai ulang hanya server miliknya. Launcher berhasil dan GET status teruji.
+Validasi: TypeScript/build produksi lulus; domain+provider mock13/13 lulus. Regresi browser advisor/recipe-experience/journey/usability22/23 lulus; satu tes gagal karena selector alert juga mengenai route announcer Next, diperbaiki hanya pada tes dan rerun1/1 lulus. Tidak mengklaim fullsuite final. Visual satu putaran1440x900/390x844/844x390, issues kosong. Screenshot advisor-simulasi-* secara eksplisit berisi respons simulasi, bukan bukti koneksi Gemini. Panduan dan pembuka Notepad ATUR-API-GEMINI.cmd ada di outputs chat lanjutan. Persetujuan visual tetap pengguna.
+
+--- Riwayat ---
+# Validasi alur memasak v11
+
+## 18 Oktober 2026 — Alur langkah memasak v11
+Keluhan cara memasak kurang memiliki alur ditangani dengan RecipeStepFlow bersama. Detail resep kini menampilkan urutan bernomor tersambung di desktop, deretan yang dapat digulir di HP, penanda langkah aktif, satu instruksi lengkap, bahan per langkah, maju/mundur dan judul berikutnya. Tombol langkah memungkinkan membaca urutan lain; pratinjau tidak menulis progres memasak. Cooking Mode menampilkan alur yang sama secara langsung, menggantikan daftar langkah tersembunyi. Langkah aktif otomatis dijaga di dalam deretan HP. Fokus heading setelah navigasi tetap terjaga.
+Urutan, instruksi, bahan, versi resep dan perhitungan porsi tidak diubah; tidak menambahkan fase atau estimasi yang tidak bersumber. Mulai Cooking Mode tetap mengikuti alur mulai/lanjut tersimpan yang ada. AI Advisor tetap belum aktif.
+TypeScript dan build produksi lulus. Run recipe-experience/journey 11/11 lulus 16,6 detik, meliputi 13 detail resep, bahan/porsi, keyboard, pindah langkah, pratinjau tanpa menulis storage, reload/resume, versi progres lama, dan judul aktif HP terlihat. Satu putaran visual desktop1440x900/HP390x844/mendatar844x390 menemukan min-width grid dan aturan global nav span yang menyembunyikan judul HP; diperbaiki, lalu konfirmasi tiga viewport errors kosong/tanpa overflow. Penjajaran nomor/garis disamakan melalui justify-content:flex-start setelah konfirmasi; build akhir lulus. Bukti alur-resep-* dan alur-memasak-* pada outputs chat lanjutan. Tidak mengklaim seluruh suite final dijalankan.
+
+--- Riwayat ---
+# Validasi kategori scroll v10
+
+## 18 Oktober 2026 — Kategori dengan scroll (v10)
+Koreksi pengguna: ganti Semua/Belum dipilih/Dipilih menjadi Utama/Bumbu/Pelengkap/Dipilih seperti sebelumnya, sambil mempertahankan panel scroll native tanpa pagination. Tab kategori menampilkan dipilih/total, Dipilih total isi dapur lintas daerah. Pencarian tetap lintas kategori; bahan kurang tetap dapat dijangkau melalui tautan ke panel yang sama. Tab mendukung panah kiri/kanan, Home/End. Skor, penyimpanan dan data resep tetap. Ini menggantikan pemilihan kategori v9; keputusan scroll v9 tetap berlaku.
+Build produksi dan TypeScript lulus. Tes pantry/usability 9/9 lulus 18,4 detik, mencakup kelompok semua daerah/jenis/API, pencarian, pilihan dan reload, skor 100%, keyboard tab, wheel internal, PageDown serta scroll menerus ke halaman pada batas panel. Visual desktop1440x900, HP390x844 dan mendatar844x390 diperiksa dalam satu putaran; pageerror/overflow kosong. Screenshot daftar-bahan-scroll-* diperbarui. Persetujuan visual berasal dari pengguna.
+
+--- Riwayat ---
+# Validasi daftar bahan scroll v9 — 18 Oktober 2026
+
+## 18 Oktober 2026 — Satu daftar bahan dengan scroll internal (v9)
+Permintaan terbaru pengguna menggantikan keputusan v4/v8 tentang tab kategori dan pagination: semua bahan relevan kini tampil pada satu panel scroll native dengan tinggi clamp(240px,42svh,360px). Tidak ada batas delapan item atau tombol halaman. Label kelompok tetap pada setiap bahan. Penyaring Semua / Belum dipilih / Dipilih dan pencarian memakai daftar yang sama; Dipilih juga dapat meninjau bahan tersimpan dari daerah lain. Filter bahan utama tetap terpisah dari kepemilikan bahan.
+Checkbox duplikat pada kartu hasil dihapus. Daftar kekurangan menampilkan nama dan tautan Lihat di daftar bahan yang menyaring bahan kurang di panel utama, tanpa memilih otomatis. Setelah centang pada filter Belum dipilih, fokus berpindah ke item berikut tanpa menggulir halaman. Integrasi keyboard deck mengenali panel scroll. Scroll wheel native bekerja di dalam panel; pada ujungnya dapat diteruskan ke halaman, tanpa lock, timer, wheel interception atau snap balik. Header transparan lama, footer baru, carousel dan video tetap sesuai keputusan pengguna sebelumnya.
+Build produksi/TypeScript lulus; domain 9/9. Regresi awal 44/45 lulus, satu timeout karena regex tes nama tombol tidak menerima spasi; diperbaiki dan tes tersebut lulus. Setelah penyempurnaan fokus/scrollbar, run final pantry/usability 9/9 lulus (22 detik), termasuk API seluruh daerah/kategori, 82→100 Tekwan, opsional, storage, kontras, wheel internal, PageDown, keyboard, batas scroll dan bab tidak berpindah. Tidak mengklaim full suite final 46/46.
+Visual satu putaran desktop1440x900, HP390x844, mendatar844x390, kemudian satu konfirmasi setelah penyempurnaan. Tidak ada pageerror/overflow. Screenshot terbaru daftar-bahan-scroll-* dan daftar-bahan-beranda-* di outputs chat lanjutan. Katalog, bobot skor dan API Advisor tidak diubah. Persetujuan visual tetap dari pengguna.
+
+--- Riwayat ---
+# Validasi keterjangkauan bahan v8 — 18 Oktober 2026
+
+- Build produksi/TypeScript lulus. Rerun akhir pantry-missing dan usability **9/9 lulus (12,9 detik)**.
+- Replikasi Tekwan 82→100 setelah merica, kaldu bubuk, bawang goreng dipilih dari daftar kekurangan; pilihan lain tidak otomatis tercentang; reload mempertahankan hasil.
+- Tab dipilih/total dan Halaman X/Y teruji. Regresi skor/API/daerah/paging/keyboard/kontras/scroll tanpa loncatan lulus dalam suite terkait.
+- Satu timeout awal berasal dari check() pada checkbox yang segera hilang dari daftar setelah dipilih; tes diperbaiki untuk memeriksa perubahan daftar/skor dan seed storage satu kali.
+- Visual 1440x900, 390x844, 844x390: errors kosong, tanpa overflow horizontal/pageerror. Bukti ../previews/pantry-v8-*. Launcher port 3001 sudah dimuat ulang.
+- Matcher/data/API tidak berubah. Full suite v7 44/44 adalah bukti sebelumnya; bukan klaim full suite baru 46/46.
+
+---
+
+## Riwayat finishing v7
+
+# Validasi finishing v7 — 18 Oktober 2026
+
+- Build produksi dan TypeScript final: lulus. Domain: 9/9 lulus pada revisi ini.
+- Satu run Playwright final setelah koreksi header: **44/44 lulus (1,8 menit)**. Menggantikan hasil awal 42 lulus/2 gagal dan rerun finishing berikutnya.
+- Fitur baru: footer/nav/sumber/kredit, carousel lift/coalescing/keyboard/fallback/cancel/duplikat inert, night autoplay muted loop playsInline, portrait tanpa video desktop, visibility/offscreen, reduced motion/saveData tanpa unduhan MP4 dan fallback poster.
+- Regresi data/API/skor 100%/pantry/storage/Cooking Mode/video hero/scroll/keyboard/carousel/tepi ilustrasi tetap lulus. Header terakhir dikembalikan ke tampilan sebelumnya sesuai instruksi pengguna; footer baru tetap.
+- Video: HyperFrames lint/runtime/layout desktop/HP lulus pada lima timestamp; 20 detik 24fps H.264 tanpa audio. Desktop 348.533 byte, HP 252.062 byte. Metadata/seam di ../night-sky-video/MEDIA-VALIDATION.json; frame awal/tengah/meteor/akhir ditinjau.
+- Visual finishing dua putaran plus konfirmasi khusus koreksi header yang diminta pengguna: 1440x900, 390x844, 844x390. Konfirmasi akhir errors kosong; tidak ada pageerror/overflow horizontal. Bukti settled final: ../previews/finishing-v7-*-recipe/night/footer.png. About kini sumber per daerah. Screenshot lift diagnosis tidak dipakai sebagai bukti final backing.
+- Footer dan warna petunjuk diperiksa pada pasangan warna utama 5,89–11,66:1; bukan audit seluruh situs. Header transparan tetap sesuai pilihan pengguna.
+- Server lokal port 3001 dimuat ulang dan siap. Tidak ada deployment, uji memasak fisik, perubahan prosedur resep/API matcher, atau aktivasi Advisor.
+
+---
+
+## Riwayat detail ringkas v6
+
+# Validasi detail ringkas v6 — 18 Oktober 2026
+
+- Build produksi dan TypeScript final: lulus; domain 9/9 lulus.
+- Browser: 37 skenario berbeda terverifikasi. Full run v6: 36 lulus, satu tes baru gagal karena belum menunggu katalog siap. Sesudah penantian panel ditambahkan, rerun empat tes recipe-experience: 4/4 lulus. Bukan satu run 37/37.
+- Bukti baru: seluruh 13 detail/gambar/provenance/sumber, takaran berubah dan diteruskan ke Cooking Mode, kembali/reload, bahan langkah aktif, fokus keyboard, semua bahan rendang dapat dijangkau dalam kelompok dan halaman maksimal enam, tab keyboard/hash/reload.
+- Regresi existing: pantry/API/skor/storage/Cooking Mode selesai, video/poster/reduced motion, scroll/header/carousel/scenery, keyboard dan enam viewport tetap lulus.
+- Dua putaran visual v6: 1440x900, 390x844, 844x390; errors kosong. Screenshot recipe-v6-*; gambar final diambil dari posisi awal untuk mencegah artefak header sticky di screenshot penuh. Tinggi contoh rendang kelompok bumbu 1593/2221/1573px pada ketiga viewport.
+- Tidak ada konten resep yang dihapus, versi/prosedur tetap. Batas enam hanya tampilan per halaman. Waktu tidak diskalakan; catatan numerik asal diberi penanda saat porsi berubah.
+- Launcher port 3001 berhasil dimuat ulang. Tidak ada deployment, persetujuan visual pengguna atau uji memasak fisik. Advisor belum aktif dan tidak lagi menawarkan input pertanyaan.
+
+---
+
+## Riwayat panel bahan v4
+
+# Validasi panel bahan v4 — 18 Oktober 2026
+
+- Build produksi dan TypeScript final: lulus.
+- Playwright final: **33/33 lulus dalam satu run (2 menit)**. Termasuk paging/tab/search, pilihan tersimpan, keyboard, pointer tanpa loncatan, paritas seluruh kategori/daerah dengan API, skor 100%, video, carousel, scroll dan Cooking Mode.
+- Domain: 9/9 dari revisi katalog sebelumnya; revisi panel ini tidak mengubah data atau perhitungan matcher.
+- Dua kegagalan awal tes terarah diperbaiki pada perilaku fokus pointer dan indeks keyboard tab, lalu seluruh suite dijalankan ulang.
+- Dua putaran visual: 1440x900, 390x844, 844x390. Konfirmasi akhir: errors kosong, maksimal delapan bahan per halaman; desktop, HP tegak dan mendatar diperiksa. Screenshot: ../previews/pantry-v4-*.
+- Semua bahan tetap dapat dijangkau melalui kategori/paging atau pencarian; tidak ada batas delapan pada isi dapur/katalog. Pilihan daerah lain tetap tersimpan.
+- Tidak ada persetujuan visual pengguna, uji memasak, deployment, atau konfirmasi server desktop aktif. QA memakai port 3000; launcher tetap port 3001.
+
+---
+
+## Riwayat validasi revisi katalog
+
+# Validasi terkini — 18 Oktober 2026
+
+- Build produksi final: lulus (`next build --webpack` dari folder app); TypeScript final: lulus.
+- Domain: 9/9 lulus, termasuk katalog published, skor setiap resep, dua kategori pada empat daerah, alias, input lama, schema, storage rusak dan validasi body.
+- Browser: 32 skenario berbeda terverifikasi. Full run final: 31 lulus, satu tes kontras mengukur di tengah transisi 160 ms. Rerun terarah setelah menunggu warna final: 1/1 lulus (3,1 detik). Bukan klaim satu run final 32/32.
+- Regresi mencakup video tanpa kontrol, jeda offscreen/tab, poster/reduced motion tanpa unduhan, portrait, hash/menu keyboard, carousel lintas daerah, alur resep/Cooking Mode/reload/fallback API, versi progres lama, semua daerah/kategori dan paritas lokal/API.
+- Tambahan skor: memilih semua bahan wajib Pindang mencapai 100; menghapus garam turun; bahan opsional tidak menaikkan skor; pilihan bertahan setelah reload.
+- Scroll: ruang baca 60% viewport + transisi 125%, lembar membuka maju/balik, scroll cepat bebas tanpa snap, mencentang bahan tidak menggeser posisi, stage tidak memiliki scroll internal.
+- Enam viewport untuk proporsi/tepi: 360x800, 390x844, 768x900, 1440x900, 1916x900, 844x390. Tidak ada overflow horizontal/pageerror pada pemeriksaan tersebut.
+- Dua putaran visual: desktop 1440x900, HP 390x844 dan mendatar 844x390. Script konfirmasi mengembalikan issues kosong. Foto rendang dan kredit, form/hasil/detail, kapal serta tiga fase rangkong diperiksa. Bukti: ../previews/usability-v3-*.
+- Teks pilihan aktif/nonaktif, label bahan, bantuan, hasil dan tombol aksi diperiksa kontras minimal 4,5:1 pada keadaan akhir. Bukan audit seluruh situs terhadap semua kriteria aksesibilitas.
+- 13 resep bersumber; catatan tiap resep membedakan adaptasi/waktu perkiraan. Tidak mengklaim uji memasak, persetujuan ahli, atau persetujuan visual pengguna.
+- Tidak ada deployment publik atau konfirmasi server desktop. Tes memakai port 3000; launcher pengguna port 3001. Jalankan ulang launcher untuk build baru.
+
+---
+
+## Riwayat validasi awal
+
+# Hasil verifikasi — 3 Oktober 2026
+
+Fondasi alur pertama selesai; belum menjadi MVP final untuk rilis.
+
+- `npm run test`: 7/7 tes domain lulus.
+- `npm run typecheck`: lulus.
+- `npm run build`: build produksi berhasil, API dinamis dan halaman aplikasi terbentuk.
+- `npm run test:e2e`: 5/5 tes Chrome lokal lulus terhadap server produksi.
+- Overflow horizontal: tidak ditemukan pada lima halaman inti di lebar 360, 390, 768, 1440 piksel (20 kombinasi).
+- Alur browser: pilih bahan, hasil, detail, Cooking Mode, maju, reload, lanjutkan progres, Advisor degraded, selesai; penyimpanan rusak, pantry dikosongkan, fallback match jaringan, serta versi cooking kedaluwarsa.
+- API: input kosong 400, bahan tidak dikenal 422, body terlalu besar 413. Gate draft/published diuji pada fungsi pemilihan katalog, bukan deployment produksi terpisah.
+- Review visual: screenshot Home 360/1440 dan pantry/hasil/detail/Cooking Mode 390 dibaca. Screenshot tersimpan di `../previews`. Tidak ada cacat material pada bukti ini; bukan klaim seluruh perangkat atau browser.
+- Pemeriksaan screenshot alur tambahan tidak menemukan `pageerror` JavaScript.
+
+Perbaikan setelah review: pemisah teks pada fixture yang berubah menjadi tanda tanya akibat encoding runner diganti menjadi tanda hubung. Build dan lima tes browser kemudian dijalankan kembali dan lulus.
+
+Runner tsx awalnya gagal pada pemanggilan Windows account-info (`uv_os_get_passwd`, ENOMEM). Tes domain dijalankan memakai shim khusus lingkungan di `work/node-userinfo.cjs` melalui NODE_OPTIONS; file tersebut diabaikan Git dan tidak dipakai kode aplikasi. Build juga dijalankan dengan preload yang sama. Typecheck dan Playwright berjalan dengan perintah standar. Dependensi tidak diedit.
+
+Preview lokal berjalan di http://127.0.0.1:3000. Bukan deployment publik. Resep masih fixture berlabel demo, tidak reviewed. AI Advisor belum terhubung ke provider. Tidak ada klaim kurasi fakta budaya, resep lengkap, uji pengguna atau kesiapan submission.
