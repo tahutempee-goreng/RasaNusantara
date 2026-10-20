@@ -2,7 +2,7 @@
 import {clearAdvisorHistory} from '@/lib/advisor-history';
 import { AiAdvisor, AiChatIcon } from './ai-advisor';
 import { RecipeStepFlow } from './recipe-experience';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { ClientCatalog, MatchInput } from '@/lib/schema';
@@ -24,6 +24,8 @@ export function Kitchen() {
   const path = usePathname(); const router = useRouter(); const params = useSearchParams();
   const [catalog, setCatalog] = useState<ClientCatalog | null>(()=>loadedCatalog);
   const [booted, setBooted] = useState(()=>Boolean(loadedCatalog));
+  const [assetsReady,setAssetsReady] = useState(()=>Boolean(loadedCatalog));
+  const finishStartup = useCallback(()=>setBooted(true),[]);
   const [error, setError] = useState(''); const [input, setInput] = useState<MatchInput>(initial);
   const [ready, setReady] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
@@ -54,8 +56,8 @@ export function Kitchen() {
   useEffect(()=>{
     if(!catalog||booted)return;
     let cancelled=false;
-    const finish=()=>{if(!cancelled)setBooted(true);};
-    // Readiness, not an artificial intro timer. A failed image cannot trap entry.
+    const finish=()=>{if(!cancelled)setAssetsReady(true);};
+    // Asset readiness is separate from the optional first-tab intro.
     const timeout=window.setTimeout(finish,4000);
     const sources=path==='/'&&catalog.recipes.length?['/images/journal/paper-mountains.webp','/images/journal/paper-foreground.png','/images/journal/nusantara-village-v2.webp']:recipe?.image&&path.startsWith('/resep/')?[recipe.image.path]:[];
     const pictures=sources.map(src=>{const image=new Image();image.src=src;return image.decode().catch(()=>{});});
@@ -91,7 +93,7 @@ export function Kitchen() {
   useEffect(() => { if (moveFocus.current && !done && !resume) { stepHeading.current?.focus({ preventScroll: true }); stepHeading.current?.scrollIntoView({ block: 'start', behavior: 'instant' }); moveFocus.current = false; } }, [step, done, resume]);
   const portions = recipe ? recipePortions(params.get('porsi'), recipe.servings) : 1;
   const name = (id: string) => catalog?.ingredients.find(item => item.id === id)?.name || id;
-  return <>{!booted&&<StartupScreen error={error}/>}<div className="application-shell" inert={!booted} aria-hidden={!booted?true:undefined}><a className="skip-link" href="#main-content">Langsung ke isi</a><SiteHeader/>
+  return <>{!booted&&<StartupScreen error={error} ready={assetsReady} onComplete={finishStartup}/>}<div className="application-shell" inert={!booted} aria-hidden={!booted?true:undefined}><a className="skip-link" href="#main-content">Langsung ke isi</a><SiteHeader/>
     {catalog?.mode === 'demo' && <aside className={path === '/' ? 'demo journal-demo' : 'demo'}>Mode demo · Data contoh untuk uji alur. Takaran, langkah, dan cerita budaya belum ditinjau untuk panduan memasak.</aside>}
     {storageWarning && <aside role="status" className="notice">Penyimpanan perangkat tidak tersedia. Progres hanya bertahan selama halaman ini terbuka.</aside>}
     <main id="main-content" className={path === '/' && catalog?.recipes.length ? 'home-main' : undefined}>

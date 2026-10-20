@@ -14,7 +14,7 @@ Website responsif untuk menemukan masakan Nusantara berdasarkan bahan di dapur, 
 - Detail resep dengan porsi 1–12, takaran praktis bersama, bahan yang kurang, langkah berurutan dan cerita daerah.
 - Cooking Mode menyimpan progres per resep/versi pada perangkat; bahan, langkah dan porsi tetap terhubung.
 - AI Teman Dapur menggunakan Gemini dari server. Konteks terbaru dibangun dari katalog server, termasuk takaran, pilihan bahan, porsi dan langkah aktif. Enam pasangan percakapan terakhir per resep tersimpan selama sesi tab, termasuk setelah refresh.
-- Beranda lima bab dengan ilustrasi Nusantara, carousel resep, video tanpa suara dan dukungan reduced motion. Perangkat sentuh menggunakan scroll native yang lebih ringan; desktop mempertahankan transisi kertas. Pembuka bermerek mengikuti kesiapan data tanpa jeda buatan.
+- Beranda lima bab dengan ilustrasi Nusantara, carousel resep, video tanpa suara dan dukungan reduced motion. Perangkat sentuh menggunakan scroll native yang lebih ringan; desktop mempertahankan transisi kertas. Pembuka pertama tab menampilkan mangkuk/uap dan teks mengetik sekitar 1,8 detik saat data siap cepat; refresh berikutnya tanpa waktu tambahan. Reduced motion langsung memakai teks lengkap.
 
 ## Teknologi
 
@@ -51,7 +51,7 @@ npm run test:e2e
 
 Suite browser memakai Google Chrome serta WebKit untuk emulasi iPhone. Pastikan Chrome tersedia, lalu jalankan `npx playwright install webkit`. Lihat playwright.config.ts, e2e/iphone-scroll.spec.ts dan e2e/server.ts. Suite menjalankan server produksi sendiri pada port 3000 sehingga memerlukan build terlebih dahulu dan port tersebut tersedia.
 
-Hasil pemeriksaan lokal 20 Oktober 2026: 30 tes domain/provider/origin dan 90 tes browser lulus; katalog 13 resep, TypeScript dan build produksi lulus. Formatter diperiksa pada 2.664 kombinasi bahan/porsi. Sesudah deployment, browser tanpa login menuntaskan bahan → rekomendasi → detail → Cooking Mode → refresh progres; satu skenario AI sungguhan mengenali Rendang 2 porsi dan langkah aktif. Ini hasil pada lingkungan pengembangan/produksi saat diperiksa, bukan jaminan semua lingkungan atau saran AI selalu benar.
+Hasil pemeriksaan lokal 20 Oktober 2026: 30 tes domain/provider/origin lulus dan 95 skenario browser terverifikasi; rincian koreksi fixture ada di VALIDATION.md; katalog 13 resep, TypeScript dan build produksi lulus. Formatter diperiksa pada 2.664 kombinasi bahan/porsi. Sesudah deployment, browser tanpa login menuntaskan bahan → rekomendasi → detail → Cooking Mode → refresh progres; satu skenario AI sungguhan mengenali Rendang 2 porsi dan langkah aktif. Ini hasil pada lingkungan pengembangan/produksi saat diperiksa, bukan jaminan semua lingkungan atau saran AI selalu benar.
 
 ## Endpoint
 

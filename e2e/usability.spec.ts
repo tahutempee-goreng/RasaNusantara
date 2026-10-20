@@ -79,6 +79,7 @@ test('each region and dish type filters UI ingredients and matches the API', asy
 test('chapter holds reading space, scroll remains free, and checking does not jump', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/');
+  await expect(page.locator('.startup-screen')).toHaveCount(0);
   await page.locator('[data-deck-ready=true]').waitFor();
   const cover = page.locator('#sampul');
   const positions = await page.evaluate(() => {
