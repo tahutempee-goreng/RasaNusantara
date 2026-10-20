@@ -93,3 +93,7 @@ Instruksi Teman Dapur meminta bahasa langsung dan alami, tanpa pembuka “Sebaga
 Sumber diperiksa sebagai rujukan kuliner dan komposisi versi resep, bukan bukti satu versi yang berlaku universal. Indonesia Travel/Kementerian Pariwisata, Dinas Kebudayaan Yogyakarta dan Dinas Lamongan dipakai untuk pengenalan daerah; sumber resep tertaut menjelaskan racikan dan teknik versi yang diadaptasi. Halaman destinasi Pemerintah Makassar tidak dapat diakses saat pemeriksaan (403), sehingga tidak ditambahkan sebagai rujukan baru; pengenalan konro menggunakan Indonesia Travel. Foto rendang tetap Midori/Wikimedia Commons CC BY 3.0; ilustrasi lain dijelaskan sebagai bantuan AI.
 
 Belum ada uji memasak langsung atau audit ahli kuliner. Tes browser memakai Chrome lokal dan emulasi ukuran viewport, bukan pemeriksaan perangkat fisik atau semua mesin browser.
+
+## Temuan percakapan nyata dan penguatan
+
+Pemeriksaan Gemini tiga giliran pertama memverifikasi konteks dan ingatan, tetapi juga memperlihatkan saran pengulenan yang bertentangan antargiliran. Karena itu, instruksi akhir diperketat: bila katalog tidak memiliki substitusi terverifikasi, jangan mengusulkan penambahan air/tepung atau perubahan pengulenan. Tanyakan apakah bahan sudah dicampur dan jelaskan ketidakpastian; pembahasan alternatif tidak berarti pengguna sudah melakukannya. Respons konfirmasi nyata setelah penguatan menyatakan tidak ada padanan terverifikasi dan meminta kondisi bahan, tanpa menawarkan jalan pintas tadi. Ini pemeriksaan sampel respons, bukan jaminan setiap respons model benar atau konsisten.
