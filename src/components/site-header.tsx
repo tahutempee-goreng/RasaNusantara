@@ -30,7 +30,7 @@ export function SiteHeader() {
         <div className="nav-disclosure"><button aria-expanded={dropdown === 'dapur'} aria-controls="kitchen-menu" onClick={() => setDropdown(dropdown === 'dapur' ? null : 'dapur')}>Dapur <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="m5 7 5 5 5-5" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg></button>{dropdown === 'dapur' && <div id="kitchen-menu" className="nav-popover"><Link href="/#cooking-guide" onClick={close}>Panduan Memasak</Link><Link href="/tentang" onClick={close}>Tentang resep & sumber</Link></div>}</div>
         <Link href="/cari" className="nav-cta" onClick={close}>Cari dari Bahan <span aria-hidden="true">↗</span></Link>
       </nav>
-      {path === '/' && <span className="journal-emblem" aria-hidden="true"><svg viewBox="0 0 40 32" fill="none" stroke="currentColor" strokeWidth="1"><path d="m2 25 12-19 7 12 5-8 12 15M9 14l5 3 4-3M3 29h34"/></svg><b>RN</b><small>NUSANTARA</small></span>}
+      {path === '/' && <Link className="journal-emblem" href="/tentang" onClick={close} aria-label="Tentang RasaNusantara" title="Kenali RasaNusantara, resep, dan sumbernya"><span className="journal-emblem-lockup"><svg aria-hidden="true" viewBox="0 0 28 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17h22c-1 7-5 10-11 10S4 24 3 17ZM9 29h10M8 12c-3-3 3-4 0-7m6 7c-3-3 3-4 0-8m6 8c-3-3 3-4 0-7"/><path d="M7 21h14"/></svg><span className="journal-emblem-name"><b>Rasa</b><span>Nusantara</span></span></span><span className="journal-emblem-caption">Tentang <span aria-hidden="true">↗</span></span></Link>}
     </div>
   </header>;
 }
