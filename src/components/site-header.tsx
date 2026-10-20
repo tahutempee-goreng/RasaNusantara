@@ -20,7 +20,7 @@ export function SiteHeader() {
   function close() { setOpen(false); setDropdown(null); }
   return <header className={path === '/' ? 'site-header journal-header' : 'site-header'} data-overlay={path === '/' ? 'true' : undefined} ref={header}>
     <div className="site-nav-wrap">
-      <Link className="brand" href="/" onClick={close} aria-label="RasaNusantara — Beranda"><span className="brand-wordmark">RasaNusantara</span><svg className="brand-ornament" aria-hidden="true" viewBox="0 0 28 14" width="28" height="14" fill="none"><path d="M0 7h7l5-5 5 5-5 5-5-5h21" stroke="currentColor" strokeWidth="1.4"/><path d="m12 5 2 2-2 2-2-2Z" fill="currentColor"/></svg></Link>
+      <Link className="brand" href="/" onClick={close} aria-label="RasaNusantara — Beranda"><span className="brand-wordmark">RasaNusantara</span></Link>
       <button ref={menuButton} className="nav-toggle" aria-expanded={open} aria-controls="site-menu" onClick={() => { setOpen(!open); setDropdown(null); }}><span>{open ? 'Tutup' : 'Menu'}</span><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d={open ? 'M5 5l10 10M15 5L5 15' : 'M3 6h14M3 10h14M3 14h14'} stroke="currentColor" strokeWidth="1.5" fill="none"/></svg></button>
       <nav aria-label="Navigasi utama" id="site-menu" className={open ? 'site-menu is-open' : 'site-menu'}>
         <Link href="/" aria-current={path === '/' ? 'page' : undefined} onClick={close}>Beranda</Link>

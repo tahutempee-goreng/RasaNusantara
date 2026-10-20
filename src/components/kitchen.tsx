@@ -11,14 +11,19 @@ import { cookingSchema, readStored, saveStored, clearStored, wizardSchema } from
 import { SiteFooter } from './site-footer';
 import { About } from './about';
 import { SiteHeader } from './site-header';
+import { StartupScreen } from './startup-screen';
 import { JournalHome } from './journal-home';
 import { PantryMatcher } from './pantry-matcher';
 import { RecipeDetail, RecipeIngredients, recipePortions } from './recipe-experience';
 
 const initial: MatchInput = { regionId: null, dishType: 'berkuah', mainIngredientId: null, ingredientIds: [] };
+// Public catalogue only. Reuse it within this document's client navigation;
+// a browser refresh still requests the current server catalogue.
+let loadedCatalog: ClientCatalog | null = null;
 export function Kitchen() {
   const path = usePathname(); const router = useRouter(); const params = useSearchParams();
-  const [catalog, setCatalog] = useState<ClientCatalog | null>(null);
+  const [catalog, setCatalog] = useState<ClientCatalog | null>(()=>loadedCatalog);
+  const [booted, setBooted] = useState(()=>Boolean(loadedCatalog));
   const [error, setError] = useState(''); const [input, setInput] = useState<MatchInput>(initial);
   const [ready, setReady] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
@@ -32,14 +37,33 @@ export function Kitchen() {
   const moveFocus = useRef(false);
   const slug = path.split('/')[2]; const recipe = catalog?.recipes.find(item => item.slug === slug);
   useEffect(() => {
-    const controller = new AbortController();
-    fetch('/api/catalog', { signal: controller.signal }).then(async response => { if (!response.ok) throw Error('Katalog belum dapat dimuat.'); return response.json(); }).then((data: ClientCatalog) => {
-      setCatalog(data); const stored = readStored('rn:wizard', wizardSchema);
-      if (stored) setInput({ ...stored.input, mainIngredientId: data.ingredients.some(i => i.id === stored.input.mainIngredientId) ? stored.input.mainIngredientId : null, ingredientIds: stored.input.ingredientIds.filter(id => data.ingredients.some(i => i.id === id)) });
+    const restore=(data:ClientCatalog)=>{
+      setCatalog(data);const stored=readStored('rn:wizard',wizardSchema);
+      if(stored)setInput({...stored.input,mainIngredientId:data.ingredients.some(i=>i.id===stored.input.mainIngredientId)?stored.input.mainIngredientId:null,ingredientIds:stored.input.ingredientIds.filter(id=>data.ingredients.some(i=>i.id===id))});
       setReady(true);
-    }).catch(error => { if (error.name !== 'AbortError') setError(error.message); });
-    return () => controller.abort();
+    };
+    if(loadedCatalog){restore(loadedCatalog);return;}
+    const controller = new AbortController();
+    const timeout = window.setTimeout(()=>{setError('Katalog terlalu lama dimuat. Periksa koneksimu, lalu coba lagi.');controller.abort();},12000);
+    fetch('/api/catalog', { signal: controller.signal }).then(async response => { if (!response.ok) throw Error('Katalog belum dapat dimuat.'); return response.json(); }).then((data: ClientCatalog) => {
+      window.clearTimeout(timeout);
+      loadedCatalog=data;restore(data);
+    }).catch(error => { window.clearTimeout(timeout);if (error.name !== 'AbortError') setError('Katalog belum dapat dimuat. Periksa koneksimu, lalu coba lagi.'); });
+    return () => {window.clearTimeout(timeout);controller.abort();};
   }, []);
+  useEffect(()=>{
+    if(!catalog||booted)return;
+    let cancelled=false;
+    const finish=()=>{if(!cancelled)setBooted(true);};
+    // Readiness, not an artificial intro timer. A failed image cannot trap entry.
+    const timeout=window.setTimeout(finish,4000);
+    const sources=path==='/'&&catalog.recipes.length?['/images/journal/paper-mountains.webp','/images/journal/paper-foreground.png','/images/journal/nusantara-village-v2.webp']:recipe?.image&&path.startsWith('/resep/')?[recipe.image.path]:[];
+    const pictures=sources.map(src=>{const image=new Image();image.src=src;return image.decode().catch(()=>{});});
+    void Promise.allSettled([document.fonts.ready,...pictures]).then(finish);
+    return()=>{cancelled=true;window.clearTimeout(timeout);};
+  // Startup runs once for the loaded catalogue, never on ordinary navigation.
+  },[catalog]);
+  useEffect(()=>{if(booted)return;const previous=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=previous;};},[booted]);
   useEffect(() => { if (ready) setStorageWarning(input.ingredientIds.length ? !saveStored('rn:wizard', { version: 1, input }) : !clearStored('rn:wizard')); }, [input, ready]);
   useEffect(() => {
     if (path !== '/hasil' || !catalog || !ready || !input.ingredientIds.length) return;
@@ -67,11 +91,11 @@ export function Kitchen() {
   useEffect(() => { if (moveFocus.current && !done && !resume) { stepHeading.current?.focus({ preventScroll: true }); stepHeading.current?.scrollIntoView({ block: 'start', behavior: 'instant' }); moveFocus.current = false; } }, [step, done, resume]);
   const portions = recipe ? recipePortions(params.get('porsi'), recipe.servings) : 1;
   const name = (id: string) => catalog?.ingredients.find(item => item.id === id)?.name || id;
-  return <><a className="skip-link" href="#main-content">Langsung ke isi</a><SiteHeader/>
+  return <>{!booted&&<StartupScreen error={error}/>}<div className="application-shell" inert={!booted} aria-hidden={!booted?true:undefined}><a className="skip-link" href="#main-content">Langsung ke isi</a><SiteHeader/>
     {catalog?.mode === 'demo' && <aside className={path === '/' ? 'demo journal-demo' : 'demo'}>Mode demo · Data contoh untuk uji alur. Takaran, langkah, dan cerita budaya belum ditinjau untuk panduan memasak.</aside>}
     {storageWarning && <aside role="status" className="notice">Penyimpanan perangkat tidak tersedia. Progres hanya bertahan selama halaman ini terbuka.</aside>}
     <main id="main-content" className={path === '/' && catalog?.recipes.length ? 'home-main' : undefined}>
-    {!catalog ? <section className="panel"><h1>{error || 'Menyiapkan dapur…'}</h1>{error && <button onClick={() => window.location.reload()}>Coba lagi</button>}</section> : !catalog.recipes.length ? <section className="panel"><p className="eyebrow">Katalog terkurasi</p><h1>Resep sedang disiapkan</h1><p>Resep akan tampil setelah sumber, cerita budaya, dan langkah memasaknya selesai ditinjau.</p></section> : path === '/' ? <>
+    {!catalog ? null : !catalog.recipes.length ? <section className="panel"><p className="eyebrow">Katalog terkurasi</p><h1>Resep sedang disiapkan</h1><p>Resep akan tampil setelah sumber, cerita budaya, dan langkah memasaknya selesai ditinjau.</p></section> : path === '/' ? <>
       <JournalHome catalog={catalog} input={input} setInput={setInput} onSearch={() => router.push('/hasil')}/>
     </> : path === '/tentang' ? <About catalog={catalog}/> : path === '/cari' ? <section className="workspace search-workspace"><PantryMatcher catalog={catalog} input={input} setInput={setInput}/></section> : path === '/hasil' ? <section className="workspace"><Link href="/cari" className="back">← Ubah pilihan bahan</Link><p className="eyebrow">02 / Temuan dapur</p><h1>Masakan yang paling dekat</h1><p>Persentase menunjukkan kecocokan berbobot: bahan inti lebih menentukan daripada pendukung. Jumlah bahan tersedia ditampilkan terpisah. Bahan opsional tidak menambah skor.</p>{localResult && <p role="status" className="notice">Koneksi terputus. Hasil dihitung di perangkat dari katalog yang sudah dimuat.</p>}{!input.ingredientIds.length ? <p>Pilih setidaknya satu bahan terlebih dahulu. <Link href="/cari">Pilih bahan</Link></p> : loading ? <p role="status">Mencocokkan bahan…</p> : result?.results.length ? <div className="cards">{result.results.map(match => { const found = catalog.recipes.find(r => r.id === match.recipeId)!; return <article className="recipe-card" key={match.recipeId}><p className="eyebrow">{found.dishType} · {found.origin}</p><h2>{found.title}</h2><strong className="score">{match.score}% <span>kecocokan berbobot</span></strong><p>{match.matchedRequiredCount} dari {match.requiredCount} bahan wajib tersedia.</p><p>{match.hasAllCore ? 'Semua bahan inti tersedia' : 'Masih ada bahan inti yang perlu disiapkan'}</p><p className="small">Belum tersedia: {match.missingRequiredIngredientIds.map(name).join(', ') || 'Tidak ada'}</p><Link className="button" href={'/resep/' + found.slug}>Lihat resep →</Link></article>; })}</div> : result && <div className="panel"><h2>Belum ada yang cocok</h2><p>Coba tambah bahan di dapurmu atau ganti pilihan bahan utama.</p><Link className="button" href="/cari">Ubah bahan</Link></div>}</section>
     : path.startsWith('/resep/') && recipe ? <RecipeDetail key={recipe.id} recipe={recipe} catalog={catalog} selected={input.ingredientIds}/>
@@ -79,7 +103,7 @@ export function Kitchen() {
 
       <AiAdvisor key={recipe.id+':'+recipe.version} resetToken={conversationReset} recipe={recipe} step={resume?.step??step} portions={portions} ingredientIds={input.ingredientIds}/></section>
     : <section className="panel"><h1>Halaman tidak ditemukan</h1><Link className="button" href="/">Kembali ke beranda</Link></section>}
-    </main><SiteFooter home={path==='/'}/></>;
+    </main><SiteFooter home={path==='/'}/></div></>;
 }
 
 

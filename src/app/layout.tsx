@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
+import { siteMetadata } from '@/lib/site-metadata';
 import './globals.css';
 import './theme.css';
-export const metadata: Metadata = { title: 'RasaNusantara', description: 'Temukan masakan Nusantara dari bahan di dapurmu dan kenali cerita di balik hidangannya.' };
+export const metadata = siteMetadata();
 export default function Layout({ children }: { children: React.ReactNode }) { return <html lang="id"><body>{children}</body></html>; }

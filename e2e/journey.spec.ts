@@ -24,7 +24,7 @@ test('all core views fit mobile, tablet and desktop widths', async ({ page }) =>
   for (const width of [360, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     for (const path of ['/', '/cari', '/hasil', '/resep/tekwan-contoh', '/masak/tekwan-contoh']) {
-      await page.goto(path); await expect(page.locator('h1')).toBeVisible(); await expect(page.getByText('Menyiapkan dapur…')).toHaveCount(0);
+      await page.goto(path); await expect(page.locator('.startup-screen')).toHaveCount(0);await expect(page.locator('h1')).toBeVisible(); await expect(page.getByText('Menyiapkan dapur…')).toHaveCount(0);
       if (path === '/hasil') await expect(page.getByRole('heading', { name: 'Tekwan', exact: true })).toBeVisible();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
       if (path === '/') await page.screenshot({ path: '../previews/app-' + width + '.png', fullPage: true });

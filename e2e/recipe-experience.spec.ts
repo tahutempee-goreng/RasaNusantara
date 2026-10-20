@@ -43,7 +43,7 @@ test('all published recipes have readable detail, image provenance, facts and so
 
 test('compact recipe sections retain every ingredient through category pages and keyboard tabs',async({page,request})=>{
  const catalog=await(await request.get('/api/catalog')).json();const recipe=catalog.recipes.find((r:any)=>r.slug==='rendang');
- await page.goto('/resep/rendang');const panel=page.locator('#bahan-resep');await expect(panel).toBeVisible();const names=new Set<string>();
+ await page.goto('/resep/rendang');await expect(page.locator('.startup-screen')).toHaveCount(0);const panel=page.locator('#bahan-resep');await expect(panel).toBeVisible();const names=new Set<string>();
  for(const label of ['Inti','Bumbu & pendukung','Opsional']){
   const group=panel.getByRole('button',{name:new RegExp('^'+label)});if(!await group.count())continue;await group.click();
   while(true){const items=panel.locator('.ingredient-list li');expect(await items.count()).toBeLessThanOrEqual(6);for(const name of await items.locator(':scope > span').evaluateAll(nodes=>nodes.map(n=>n.childNodes[0].textContent!.trim())))names.add(name);
