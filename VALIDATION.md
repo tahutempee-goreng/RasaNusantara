@@ -229,3 +229,6 @@ Perbaikan setelah review: pemisah teks pada fixture yang berubah menjadi tanda t
 Runner tsx awalnya gagal pada pemanggilan Windows account-info (`uv_os_get_passwd`, ENOMEM). Tes domain dijalankan memakai shim khusus lingkungan di `work/node-userinfo.cjs` melalui NODE_OPTIONS; file tersebut diabaikan Git dan tidak dipakai kode aplikasi. Build juga dijalankan dengan preload yang sama. Typecheck dan Playwright berjalan dengan perintah standar. Dependensi tidak diedit.
 
 Preview lokal berjalan di http://127.0.0.1:3000. Bukan deployment publik. Resep masih fixture berlabel demo, tidak reviewed. AI Advisor belum terhubung ke provider. Tidak ada klaim kurasi fakta budaya, resep lengkap, uji pengguna atau kesiapan submission.
+
+
+Verifikasi produksi v21 (2026-10-20T20:48:34): https://rasanusantara-ashen.vercel.app/ memuat kode 7b658723c3298e879ca84b7dce8301243f523d2f. Chrome desktop dan WebKit sentuh membuka halaman tanpa pageerror, wordmark tanpa ornamen, scroll mode sesuai perangkat, pilihan daerah/bumbu dan reload penyimpanan lulus. AI GET tetap enabled (key server tidak diubah; perubahan v21 tidak memanggil Gemini baru). HTML awal WhatsApp untuk beranda dan Rendang memuat OG/Twitter; PNG publik HTTP200,1200×630. Tidak menguji kirim pesan sungguhan/cache chat maupun iPhone fisik. Rincian: V21-PRODUKSI.json dan screenshot v21-online-desktop/iphone.
