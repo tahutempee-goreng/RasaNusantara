@@ -12,6 +12,16 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
     const panels = Array.from(stage.querySelectorAll<HTMLElement>('[data-journal-chapter]'));
     const preference = matchMedia('(prefers-reduced-motion: reduce)');
     const touchDevice = matchMedia('(hover: none) and (pointer: coarse)');
+    const supportsStableViewport = CSS.supports('height', '100lvh');
+    const flat = () => preference.matches || touchDevice.matches && !supportsStableViewport;
+    const light = () => touchDevice.matches && !preference.matches && supportsStableViewport;
+    const viewportProbe = document.createElement('span');
+    viewportProbe.setAttribute('aria-hidden', 'true');
+    viewportProbe.style.cssText = 'position:absolute;top:0;left:0;width:0;height:100lvh;visibility:hidden;pointer-events:none;overflow:hidden';
+    stage.append(viewportProbe);
+    let lightWidth = 0;
+    let lightHeights: number[] = [];
+    let lastChapter = 0, headerHeight = 76;
     let frame = 0, lastActive: number | null = -1, viewport = 0, top = 0, travel = 0, hold = 0, disposed = false;
     let starts: number[] = [], overflow: number[] = [];
     let keyboardNavigation = false;
@@ -19,9 +29,10 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
     const keyboardMode = () => { keyboardNavigation = true; };
     const pointerMode = (event: PointerEvent) => {
       keyboardNavigation = false;
+      if (touchDevice.matches) return;
       // A user interacting with revealed content interrupts an anchor's smooth
       // scroll at its current position, rather than carrying the form away.
-      if (!touchDevice.matches && !preference.matches && (event.target as Element).closest('[data-journal-chapter]')) {
+      if (!preference.matches && !touchDevice.matches && (event.target as Element).closest('[data-journal-chapter]')) {
         const stopped = scrollY;
         window.scrollTo({ top: stopped, behavior: 'instant' });
         // Chrome can commit one compositor frame of a cancelled smooth scroll.
@@ -46,7 +57,7 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
     };
     const paint = () => {
       frame = 0;
-      if (preference.matches || touchDevice.matches) {
+      if (flat()) {
         // Let the browser compositor own touch scrolling. No sheet transforms,
         // parallax variables or scroll-position corrections on toolbar resize.
         const bounds = panels.map(panel => panel.getBoundingClientRect());
@@ -55,25 +66,38 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
         panels.forEach((panel, i) => data(panel, 'moving', String(!document.hidden && bounds[i].bottom > 0 && bounds[i].top < innerHeight)));
         const rootBounds = root.getBoundingClientRect();
         data(root, 'inView', String(rootBounds.bottom > top && rootBounds.top < innerHeight));
+        lastChapter = index;
         publish(preference.matches ? null : index);
         tintHeader(index);
         return;
       }
-      const scroll = Math.max(0, top - root.getBoundingClientRect().top);
+      const rootBounds = root.getBoundingClientRect();
+      const scroll = Math.max(0, top - rootBounds.top);
+      const lightweight = light();
+      if (lightweight) data(root, 'inView', String(rootBounds.bottom > innerHeight * .6 && rootBounds.top < innerHeight));
       let index = 0;
       panels.forEach((panel, i) => {
         const local = scroll - starts[i];
         const read = clamp(local, 0, overflow[i]);
         const exit = i === panels.length - 1 ? 0 : clamp((local - overflow[i] - hold) / travel, 0, 1);
         if (local >= 0) index = i;
-        style(panel, 'transform', `translate3d(0,${-read - exit * viewport}px,0)`);
-        style(panel, 'visibility', exit >= 1 || local < -travel ? 'hidden' : 'visible');
-        style(panel, '--page-progress', String(exit));
-        style(panel, '--tear-progress', String(exit));
-        style(panel, '--depth-progress', String(clamp(local / (viewport + overflow[i]), -1, 1)));
-        data(panel, 'moving', String(!document.hidden && local > -travel && exit < 1));
-        const previous = i - 1;
-        style(panel, '--sheet-reveal', String(i === 0 ? 1 : clamp((scroll - starts[previous] - overflow[previous] - hold) / travel, 0, 1)));
+        const visible = exit < 1 && local >= -travel;
+        style(panel, 'visibility', visible ? 'visible' : 'hidden');
+        // Touch writes only one sheet transform while reading/lifting. Incoming
+        // paper stays still; hidden sheets never receive per-frame transforms.
+        const offset = -read - exit * viewport;
+        style(panel, 'transform', lightweight && (!visible || offset === 0) ? 'none' : `translate3d(0,${offset}px,0)`);
+        const onScreen = rootBounds.bottom > 0 && rootBounds.top < innerHeight;
+        data(panel, 'moving', String(!document.hidden && visible && onScreen));
+        if (lightweight) {
+          data(panel, 'lifting', String(visible && rootBounds.bottom > 0 && (read > 0 || exit > 0)));
+        } else {
+          style(panel, '--page-progress', String(exit));
+          style(panel, '--tear-progress', String(exit));
+          style(panel, '--depth-progress', String(clamp(local / (viewport + overflow[i]), -1, 1)));
+          const previous = i - 1;
+          style(panel, '--sheet-reveal', String(i === 0 ? 1 : clamp((scroll - starts[previous] - overflow[previous] - hold) / travel, 0, 1)));
+        }
         data(panel, 'exit', String(exit));
       });
       panels.forEach((panel, i) => {
@@ -83,13 +107,18 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
         if (panel.inert !== !exposed) panel.inert = !exposed;
         if (panel.getAttribute('aria-hidden') !== String(!exposed)) panel.setAttribute('aria-hidden', String(!exposed));
       });
+      lastChapter = index;
       publish(index);
-      tintHeader(index);
+      const local = scroll - starts[index];
+      const progress = index === panels.length - 1 ? 0 : clamp((local - overflow[index] - hold) / travel, 0, 1);
+      const bottom = (lightHeights[index] || viewport) - clamp(local, 0, overflow[index]) - progress * viewport;
+      tintHeader(lightweight && index < panels.length - 1 && bottom < headerHeight ? index + 1 : index);
+      if (header) data(header, 'touchScroll', String(lightweight && scroll > 4));
     };
     const schedule = () => { if (!frame) frame = requestAnimationFrame(paint); };
     const measure = () => {
-      if (preference.matches || touchDevice.matches) {
-        const restore = root.dataset.deckReady === 'true' ? panels[lastActive || 0] : null;
+      if (flat()) {
+        const restore = root.dataset.deckReady === 'true' ? panels[lastChapter] : null;
         const mode = preference.matches ? 'reduced' : 'native';
         if (root.dataset.scrollMode !== mode || restore) {
           delete root.dataset.deckReady;
@@ -102,14 +131,23 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
             for (const prop of ['transform', 'visibility', 'min-height', '--page-progress', '--tear-progress', '--sheet-reveal', '--depth-progress']) panel.style.removeProperty(prop);
           });
         }
-        top = header?.getBoundingClientRect().height || 76;
+        headerHeight = header?.getBoundingClientRect().height || 76;
+        top = headerHeight;
         style(root, '--chapter-nav-top', `${top + 8}px`);
         if (restore) window.scrollTo({ top: scrollY + restore.getBoundingClientRect().top - top, behavior: 'instant' });
         paint();
         return;
       }
+      const lightweight = light();
       const previousHeight = viewport;
-      const restoreNative = root.dataset.scrollMode === 'native' || root.dataset.scrollMode === 'reduced' ? panels[lastActive || 0] : null;
+      const widthChanged = lightweight && (lightWidth !== innerWidth || root.dataset.scrollMode !== 'paper-light');
+      if (widthChanged) { lightWidth = innerWidth; lightHeights = []; }
+      if (lightweight && root.dataset.scrollMode !== 'paper-light') {
+        panels.forEach(panel => {
+          for (const prop of ['--page-progress', '--tear-progress', '--depth-progress', '--sheet-reveal']) panel.style.removeProperty(prop);
+        });
+      }
+      const restoreNative = root.dataset.scrollMode === 'native' || root.dataset.scrollMode === 'reduced' ? panels[lastChapter] : null;
       const previousStarts = [...starts];
       const previousOverflow = [...overflow];
       const pinned = root.dataset.deckReady === 'true' && root.getBoundingClientRect().top <= top;
@@ -119,34 +157,46 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
       const previousLocal = previousScroll - (previousStarts[previousIndex] || 0);
       const wasLifting = previousLocal > (previousOverflow[previousIndex] || 0) + hold;
       const ratio = wasLifting ? (previousLocal - previousOverflow[previousIndex] - hold) / travel : previousLocal / Math.max(1, (previousOverflow[previousIndex] || 0) + hold);
+      headerHeight = header?.getBoundingClientRect().height || 76;
       top = header?.dataset.overlay === 'true' ? 0 : document.querySelector('.site-header')?.getBoundingClientRect().height || 76;
-      viewport = Math.max(240, innerHeight - top);
-      travel = viewport * 1.25;
-      hold = viewport * .6;
-      root.dataset.readDistance = String(hold);
-      root.dataset.travelDistance = String(travel);
-      root.style.setProperty('--deck-top', `${top}px`);
-      root.style.setProperty('--deck-height', `${viewport}px`);
-      root.dataset.deckReady = 'true';
-      data(root, 'scrollMode', 'paper');
+      // Freeze the large-viewport baseline on height-only toolbar/keyboard
+      // changes. Recompute for actual width/orientation changes only.
+      if (!lightweight || widthChanged || !viewport) viewport = Math.max(240, (lightweight ? viewportProbe.getBoundingClientRect().height : innerHeight) - top);
+      travel = viewport * (lightweight ? 1 : 1.25);
+      hold = viewport * (lightweight ? .16 : .6);
+      if (lightweight) style(root, '--chapter-nav-top', `${headerHeight + 8}px`);
+      data(root, 'readDistance', String(hold));
+      data(root, 'travelDistance', String(travel));
+      style(root, '--deck-top', `${top}px`);
+      style(root, '--deck-height', `${viewport}px`);
+      data(root, 'deckReady', 'true');
+      data(root, 'scrollMode', lightweight ? 'paper-light' : 'paper');
       starts = []; overflow = [];
       let distance = 0;
-      panels.forEach(panel => style(panel, 'min-height', `${viewport}px`));
+      panels.forEach((panel, i) => style(panel, 'min-height', `${lightweight ? lightHeights[i] || viewport : viewport}px`));
       const heights = panels.map(panel => panel.offsetHeight);
       panels.forEach((panel, i) => {
         starts.push(distance);
-        overflow.push(Math.max(0, heights[i] - viewport));
+        if (lightweight) {
+          // Keep a chapter's reading space stable when ingredient results shrink.
+          lightHeights[i] = Math.max(lightHeights[i] || viewport, heights[i]);
+          style(panel, 'min-height', `${lightHeights[i]}px`);
+        }
+        overflow.push(Math.max(0, (lightweight ? lightHeights[i] : heights[i]) - viewport));
         panel.dataset.start = String(distance);
         panel.dataset.overflow = String(overflow[i]);
-        distance += overflow[i] + hold + (i < panels.length - 1 ? travel : 0);
+        distance += overflow[i] + (lightweight && i === panels.length - 1 ? 0 : hold) + (i < panels.length - 1 ? travel : 0);
       });
-      root.style.height = `${viewport + distance}px`;
+      style(root, 'height', `${viewport + distance}px`);
       // Content updates must never pull the reader back while they select ingredients.
       if (restoreNative) {
         window.scrollTo({top:scrollY + root.getBoundingClientRect().top - top + starts[panels.indexOf(restoreNative)] + 1,behavior:'instant'});
       } else if (pinned && previousHeight !== viewport) {
         const local = wasLifting ? overflow[previousIndex] + hold + clamp(ratio, 0, 1) * travel : clamp(ratio, 0, 1) * (overflow[previousIndex] + hold);
         window.scrollTo({ top: scrollY + root.getBoundingClientRect().top - top + starts[previousIndex] + local, behavior: 'instant' });
+      } else if (lightweight && pinned && previousStarts.length) {
+        const shift = starts[previousIndex] - previousStarts[previousIndex];
+        if (Math.abs(shift) > .5) window.scrollTo({top:scrollY + shift,behavior:'instant'});
       }
       paint();
     };
@@ -154,17 +204,21 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
       const panel = target.closest<HTMLElement>('[data-journal-chapter]');
       const index = panel ? panels.indexOf(panel) : -1;
       if (index < 0 || !panel) return false;
-      if (preference.matches || touchDevice.matches) {
+      if (flat()) {
         // scrollIntoView adds both global scroll-padding and section margins.
         // Use one header offset, especially when landscape height is short.
         const headroom = header?.getBoundingClientRect().height || top;
-        window.scrollTo({top:scrollY+target.getBoundingClientRect().top-headroom-16,behavior:preference.matches?'instant':behavior});
+        window.scrollTo({top:scrollY+target.getBoundingClientRect().top-headroom-16,behavior:preference.matches||touchDevice.matches?'instant':behavior});
         return true;
       }
       const headroom = header?.getBoundingClientRect().height || top;
       const inset = clamp(target.getBoundingClientRect().top - panel.getBoundingClientRect().top - headroom - 24, 0, overflow[index]);
       const origin = scrollY + root.getBoundingClientRect().top - top;
-      window.scrollTo({ top: origin + starts[index] + inset + 1, behavior });
+      const destination = origin + starts[index] + inset + (light() ? 3 : 1);
+      cancelAnimationFrame(stopFrame);
+      // Direct chapter navigation on touch avoids overlapping Safari smooth
+      // scrolls. Finger/wheel scrolling still drives the complete paper lift.
+      window.scrollTo({top:destination,behavior:light()?'instant':behavior});
       return true;
     };
     const anchor = (event: MouseEvent) => {
@@ -195,6 +249,7 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
       const safeTop = header?.getBoundingClientRect().bottom || top;
       if (panel && !panel.inert && (bounds.top < safeTop + 20 || bounds.bottom > innerHeight - 80)) jump(scroller || target, 'instant');
     };
+    const manualScroll = () => { cancelAnimationFrame(stopFrame); };
     const observer = new ResizeObserver(measure);
     // Font metrics must settle before a chapter jump is assigned a scroll position.
     void document.fonts.ready.then(() => {
@@ -203,6 +258,8 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
       panels.forEach(panel => observer.observe(panel));
       window.addEventListener('scroll', schedule, { passive: true });
       window.addEventListener('resize', measure);
+      window.addEventListener('touchmove', manualScroll, { passive: true });
+      window.addEventListener('wheel', manualScroll, { passive: true });
       preference.addEventListener('change', measure);
       touchDevice.addEventListener('change', measure);
       document.addEventListener('click', anchor, true);
@@ -218,7 +275,10 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
     return () => {
       disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(stopFrame); observer.disconnect();
       window.removeEventListener('scroll', schedule);
+      viewportProbe.remove();
       window.removeEventListener('resize', measure);
+      window.removeEventListener('touchmove', manualScroll);
+      window.removeEventListener('wheel', manualScroll);
       preference.removeEventListener('change', measure);
       touchDevice.removeEventListener('change', measure);
       document.removeEventListener('click', anchor, true);
@@ -226,7 +286,7 @@ export function usePaperDeck(journal: RefObject<HTMLDivElement | null>) {
       document.removeEventListener('pointerdown', pointerMode, true);
       document.removeEventListener('visibilitychange', schedule);
       root.removeEventListener('focusin', focus);
-      if (header) { delete header.dataset.chapter; delete header.dataset.tone; }
+      if (header) { delete header.dataset.chapter; delete header.dataset.tone; delete header.dataset.touchScroll; }
     };
   }, [journal]);
   return active;

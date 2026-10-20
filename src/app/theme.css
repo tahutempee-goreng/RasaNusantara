@@ -541,3 +541,8 @@ html{scrollbar-color:#8b9585 #f2ead8}
 @keyframes startupSteamRise{0%{transform:translateY(5px);opacity:0}20%{opacity:.9}75%{opacity:.5}100%{transform:translateY(-7px);opacity:0}}
 @keyframes startupCaret{0%,100%{opacity:1}50%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.startup-screen{transition:none}.startup-screen .startup-bowl,.startup-screen .startup-steam path,.startup-typed::after{animation:none!important;transform:none}.startup-screen[data-intro=pending] .startup-bowl{opacity:1}}
+
+.journal-header[data-touch-scroll=true][data-tone=dark]{background:#1b2941f5}
+
+/* Match menu ink immediately to the paper revealed under the touch header. */
+@media(hover:none) and (pointer:coarse){.journal-header{transition:none}.journal-header .nav-toggle{transition:background-color .16s}.journal-header[data-tone=light] .nav-toggle{color:#29354a}}

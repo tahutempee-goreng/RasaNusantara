@@ -133,24 +133,26 @@
 
 @media(min-width:1101px) and (max-height:850px){.hornbill{width:116px;height:98px}.birdCanvas{transform:scale(.116)}}
 
-/* Touch devices scroll their actual content, without giant pinned GPU sheets.
-   Keep the paper artwork while decorative depth stays still during momentum. */
+/* Touch keeps the paper lift, without decorative depth or moving backgrounds. */
 .journal[data-scroll-mode=native] .stage{position:relative}
 .journal[data-scroll-mode=native] [data-journal-chapter]{overflow:clip;will-change:auto}
-.journal[data-scroll-mode=native] .landscape{transform:scale(1.12);filter:none}
-.journal[data-scroll-mode=native] .foreground{transform:scale(1.07)}
-.journal[data-scroll-mode=native] :is(.villageLayer,.recipeVillage,.pantryIslands,.stars,.nightHills,.nightForeground){transform:none}
-.journal[data-scroll-mode=native] .storyIslands{transform:rotate(-12deg)}
-.journal[data-scroll-mode=native] .textile{transform:rotate(8deg)}
-.journal[data-scroll-mode=native] .storySpices{transform:rotate(-9deg)}
-.journal[data-scroll-mode=native] .recipeSpices{transform:rotate(140deg)}
-.journal[data-scroll-mode=native] .tearLayers{filter:none}
-.journal[data-scroll-mode=native] .chapterNav{display:flex;position:fixed;z-index:16;right:4px;top:50%;transform:translateY(-50%);flex-direction:column;gap:0}
-.journal[data-scroll-mode=native][data-in-view=false] .chapterNav{visibility:hidden;pointer-events:none}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .landscape{transform:scale(1.12);filter:none}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .foreground{transform:scale(1.07)}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) :is(.villageLayer,.recipeVillage,.pantryIslands,.stars,.nightHills,.nightForeground){transform:none}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .storyIslands{transform:rotate(-12deg)}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .textile{transform:rotate(8deg)}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .storySpices{transform:rotate(-9deg)}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .recipeSpices{transform:rotate(140deg)}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .tearLayers{filter:none}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .chapterNav{display:flex;position:fixed;z-index:16;right:4px;left:auto;bottom:auto;top:50%;transform:translateY(-50%);flex-direction:column;gap:0;background:none;border:0;padding:0}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .chapterNav .chapterLabel{right:calc(100% + 5px);bottom:auto}
+.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light])[data-in-view=false] .chapterNav{visibility:hidden;pointer-events:none}
 .journal[data-deck-ready=true] [data-journal-chapter][aria-hidden=true]{will-change:auto}
-@media(max-width:700px){.journal[data-scroll-mode=native] .landscape{transform:scale(1.1)}}
+.journal[data-scroll-mode=paper-light][data-deck-ready=true] [data-journal-chapter]{clip-path:none;backface-visibility:visible;will-change:auto;padding-bottom:calc(106px + 100lvh - 100svh)}
+.journal[data-scroll-mode=paper-light] .cover{padding-bottom:calc(145px + 100lvh - 100svh)}
+.journal[data-scroll-mode=paper-light] [data-journal-chapter][data-lifting=true]{will-change:transform}
+@media(max-width:700px){.journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .landscape{transform:scale(1.1)}}
 @media(max-height:500px){
- .journal[data-scroll-mode=native] .chapterNav{top:var(--chapter-nav-top,88px);bottom:8px;left:auto;right:4px;transform:none;flex-direction:column;justify-content:center;background:none;border:0;padding:0}
- .journal[data-scroll-mode=native] .chapterNav a{flex-shrink:0}
- .journal[data-scroll-mode=native] .chapterNav .chapterLabel{right:calc(100% + 5px);bottom:auto}
+ .journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .chapterNav{top:var(--chapter-nav-top,88px);bottom:8px;left:auto;right:4px;transform:none;flex-direction:column;justify-content:center;background:none;border:0;padding:0}
+ .journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .chapterNav a{flex-shrink:0}
 }
