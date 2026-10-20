@@ -8,7 +8,7 @@ Website responsif untuk menemukan masakan Nusantara berdasarkan bahan di dapur, 
 
 ## Fitur
 
-- Katalog 13 resep dari Palembang, Padang/Minangkabau, Jawa, dan Makassar, dengan sumber resep serta konteks budaya tertaut.
+- Katalog 13 resep dari Palembang, Padang/Minangkabau, Jawa, dan Makassar, dengan tiga bagian cerita per hidangan dan rujukan per bagian. Halaman Tentang menyatukan alur aplikasi, sumber, kredit dan penyimpanan.
 - Filter daerah dan jenis masakan; daftar bahan utama, bumbu, pelengkap, pencarian dan pilihan tersimpan.
 - Rekomendasi langsung berubah. Skor berbobot bahan inti 3, pendukung 1, opsional 0; 100% berarti seluruh bahan wajib tersedia.
 - Detail resep dengan porsi 1–12, takaran praktis bersama, bahan yang kurang, langkah berurutan dan cerita daerah.

@@ -212,7 +212,38 @@
     "culture": {
       "summary": "Tekwan dikenal sebagai sup ikan Palembang. Bola ikan kecil ditemani kuah udang dan pelengkap seperti jamur serta soun.",
       "sourceIds": [
-        "rb-tekwan"
+        "rb-tekwan",
+        "travel-tekwan"
+      ],
+      "sections": [
+        {
+          "title": "Semangkuk Palembang",
+          "paragraphs": [
+            "Di antara hidangan ikan yang dikenal dari Palembang, tekwan memiliki cara hadir yang berbeda. Ia disajikan sebagai sup: potongan adonan ikan berukuran kecil bertemu kuah bening yang gurih. Indonesia Travel menempatkan tekwan sebagai salah satu pilihan kuliner khas Sumatra Selatan selain pempek. Keduanya sama-sama mengangkat ikan, tetapi pengalaman menyantapnya tidak serupa. Pada tekwan, kuah menjadi bagian utama dari sajian, bukan sekadar pendamping."
+          ],
+          "sourceIds": [
+            "travel-tekwan"
+          ]
+        },
+        {
+          "title": "Rasa yang dibangun berlapis",
+          "paragraphs": [
+            "Bola ikan, kaldu udang, jamur kuping, dan soun memberi karakter yang saling melengkapi. Ikan membentuk isi mangkuk, sementara kepala serta kulit udang dapat dimanfaatkan untuk membuat kaldu yang kemudian disaring. Resep rujukan RasaBunda memakai tapioka dan putih telur pada adonannya. Karena itu, penyebutan sagu dalam gambaran kuliner umum tidak berarti semua tepung bisa ditukar begitu saja pada resep yang sedang kamu buka."
+          ],
+          "sourceIds": [
+            "rb-tekwan"
+          ]
+        },
+        {
+          "title": "Pelengkap yang memberi kesegaran",
+          "paragraphs": [
+            "Bengkuang, daun bawang, bawang goreng, sambal, atau perasan jeruk dapat memberi lapisan rasa dan tekstur lain. Pilihannya bergantung pada versi resep dan cara penyajian. Di katalog ini, pelengkap ditempatkan terpisah agar kamu dapat mengenali mana bahan pembentuk sajian dan mana tambahan saat meracik mangkuk. Tekwan memperlihatkan bahwa identitas hidangan juga terletak pada pertemuan kuah, isi, dan pelengkapnya."
+          ],
+          "sourceIds": [
+            "travel-tekwan",
+            "rb-tekwan"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -551,7 +582,37 @@
     "culture": {
       "summary": "Pindang patin menyandingkan ikan dengan rasa asam, pedas dan aroma rempah. Nanas memberi kesegaran pada versi ini.",
       "sourceIds": [
-        "sasa-pindang"
+        "sasa-pindang",
+        "travel-pindang"
+      ],
+      "sections": [
+        {
+          "title": "Ikan dan kuah dari Sumatra Selatan",
+          "paragraphs": [
+            "Pindang menghadirkan sisi lain kuliner Palembang: ikan dimasak dalam kuah yang mempertemukan rasa asam, pedas, dan gurih. Indonesia Travel mencatat bahwa patin bukan satu-satunya ikan yang digunakan; baung dan gabus juga hadir dalam ragam pindang. Nama hidangannya menunjuk pada sebuah keluarga masakan, sedangkan jenis ikan dan racikan bumbunya memberi ciri pada setiap versi yang sampai ke meja."
+          ],
+          "sourceIds": [
+            "travel-pindang"
+          ]
+        },
+        {
+          "title": "Kesegaran di antara rempah",
+          "paragraphs": [
+            "Pada versi patin dalam katalog ini, nanas dan tomat menjadi bagian penting dari kuah. Serai, daun jeruk, jahe, dan kemangi menambah lapisan aroma. Sumber resep Sasa menggunakan asam jawa serta sentuhan jeruk pada tahap yang berbeda. Ini perlu dibedakan dari gambaran pindang lain yang memakai asam kandis: bahan pemberi rasa asam dapat berbeda, sehingga mengikuti satu versi secara utuh lebih jelas daripada mencampur takarannya."
+          ],
+          "sourceIds": [
+            "sasa-pindang"
+          ]
+        },
+        {
+          "title": "Disajikan bersama nasi hangat",
+          "paragraphs": [
+            "Pindang dikenal sebagai sajian berkuah yang dapat dinikmati bersama nasi. Kuahnya ikut membentuk pengalaman makan, sehingga ikan dan rempah tidak berdiri sendiri. Saat mengenali hidangan ini, perhatikan hubungan bahan utamanya dengan rasa segar pada kuah. Cerita tersebut membantu membedakan pindang patin dari sup ikan lain, tanpa harus menganggap semua pindang Palembang memiliki komposisi yang persis sama."
+          ],
+          "sourceIds": [
+            "travel-pindang"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -701,7 +762,39 @@
     "culture": {
       "summary": "Adaan adalah pempek berbentuk bulat yang digoreng. Pempek menjadi salah satu hidangan yang erat dengan Palembang dan biasa ditemani cuko.",
       "sourceIds": [
-        "travel-pempek"
+        "travel-pempek",
+        "sasa-adaan"
+      ],
+      "sections": [
+        {
+          "title": "Salah satu wajah pempek",
+          "paragraphs": [
+            "Pempek lekat dengan Palembang dan dikenal melalui perpaduan ikan dengan tepung pembentuk adonan. Di dalam keluarga hidangan ini, bentuk bukan sekadar hiasan: ia membantu kita mengenali ragam sajian yang berbeda. Adaan adalah pempek berbentuk bulat. Ukurannya yang ringkas dan permukaan yang digoreng membuat penampilannya mudah dibedakan dari lenjer yang memanjang, meskipun keduanya sama-sama membawa identitas kuliner Palembang."
+          ],
+          "sourceIds": [
+            "travel-pempek",
+            "sasa-adaan"
+          ]
+        },
+        {
+          "title": "Gurihnya adonan bersantan",
+          "paragraphs": [
+            "Resep adaan yang menjadi acuan katalog ini memadukan ikan tenggiri, tapioka, telur, dan santan. Santan ikut membentuk karakter gurih pada versi tersebut. Adonan dibentuk lalu langsung digoreng, sehingga alurnya berbeda dari lenjer rebus-goreng. Perbedaan teknik ini penting saat membaca resep: nama pempek yang sama-sama berbahan ikan tidak berarti urutan kerja dan komposisinya dapat dipertukarkan."
+          ],
+          "sourceIds": [
+            "sasa-adaan"
+          ]
+        },
+        {
+          "title": "Pertemuan pempek dan cuko",
+          "paragraphs": [
+            "Cuko yang manis, asam, dan pedas dikenal sebagai pendamping pempek Palembang. Kehadirannya memberi kontras terhadap rasa gurih pada adonan ikan. Mengenali pasangan ini membantu melihat pempek sebagai sajian yang utuh, bukan hanya gorengan berbentuk tertentu. Versi rumahan tetap dapat memiliki perbedaan, dan resep yang kamu buka di sini merupakan satu adaptasi bersumber, bukan satu-satunya ukuran untuk seluruh ragam adaan."
+          ],
+          "sourceIds": [
+            "travel-pempek",
+            "sasa-adaan"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -911,7 +1004,39 @@
     "culture": {
       "summary": "Lenjer dikenali dari bentuk memanjang. Pempek berbahan ikan dari Palembang biasa disandingkan dengan cuko yang asam dan pedas.",
       "sourceIds": [
-        "travel-pempek"
+        "travel-pempek",
+        "rb-lenjer"
+      ],
+      "sections": [
+        {
+          "title": "Bentuk panjang yang mudah dikenali",
+          "paragraphs": [
+            "Di antara ragam pempek Palembang, lenjer dikenali melalui bentuknya yang memanjang. Bahan ikan dan tepung tetap menjadi pengikat identitasnya dengan keluarga pempek, tetapi bentuk tersebut memberi cara membagi dan menyajikan yang berbeda. Lenjer dapat dipotong sebelum disajikan. Karena itu, satu adonan panjang bisa menghadirkan beberapa bagian dalam piring, ditemani pelengkap serta cuko yang menjadi ciri sajian pempek."
+          ],
+          "sourceIds": [
+            "rb-lenjer",
+            "travel-pempek"
+          ]
+        },
+        {
+          "title": "Dua tahap untuk dua tekstur",
+          "paragraphs": [
+            "Versi lenjer goreng pada katalog ini mengikuti alur perebusan lalu penggorengan. Adonan yang telah dibentuk direbus terlebih dahulu, kemudian ditiriskan dan dipotong untuk digoreng. Tahap ini membedakannya dari adaan yang langsung masuk ke minyak. Resep rujukan memakai ikan tenggiri, tapioka, putih telur, dan air es. Detail tersebut menjelaskan mengapa nama bahan saja belum cukup untuk menggambarkan karakter hasil akhirnya."
+          ],
+          "sourceIds": [
+            "rb-lenjer"
+          ]
+        },
+        {
+          "title": "Cuko dan pelengkapnya",
+          "paragraphs": [
+            "Rasa gurih pempek bertemu cuko yang membawa rasa manis, asam, dan pedas. Timun atau mi dapat hadir sebagai pendamping menurut versi penyajiannya. Saat membaca resep lenjer, perhatikan pula bagian cuko karena ia merupakan racikan tersendiri, bukan kuah sup. Dari satu piring sederhana, kita bisa mengenali hubungan antara bentuk adonan, teknik memasak, dan pasangan rasa yang membuat pempek mudah diingat."
+          ],
+          "sourceIds": [
+            "rb-lenjer",
+            "travel-pempek"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -1182,7 +1307,38 @@
     "culture": {
       "summary": "Dalam tradisi Minangkabau, santan dan rempah dimasak lama sampai mengering. Tahap rendang lebih gelap dan kering dibanding kalio.",
       "sourceIds": [
-        "travel-rendang"
+        "travel-rendang",
+        "sasa-rendang"
+      ],
+      "sections": [
+        {
+          "title": "Lebih dari lauk berempah",
+          "paragraphs": [
+            "Rendang berakar pada tradisi kuliner Minangkabau di Sumatra Barat. Dalam penjelasan Indonesia Travel, perpaduan daging, santan, cabai, dan bumbu juga dibaca sebagai gambaran unsur masyarakat yang saling melengkapi. Dengan demikian, hidangan ini tidak hanya dikenali melalui warna dan rasanya. Ia turut membawa cara memandang kebersamaan, ketika unsur yang berbeda bertemu dalam satu masakan dan masing-masing memberi peran."
+          ],
+          "sourceIds": [
+            "travel-rendang"
+          ]
+        },
+        {
+          "title": "Perjalanan dari santan ke bumbu pekat",
+          "paragraphs": [
+            "Ciri rendang dibangun melalui proses memasak yang panjang. Santan dan bumbu mengalami perubahan: mula-mula berkuah, kemudian mengental, lalu semakin kering dan melekat pada daging. Tahap kalio masih memiliki kelembapan lebih tinggi, sedangkan rendang berada pada tahap yang lebih kering. Perbedaan itu membantu menjelaskan mengapa daging berbumbu santan yang masih banyak kuahnya tidak otomatis memiliki karakter yang sama dengan rendang kering."
+          ],
+          "sourceIds": [
+            "travel-rendang"
+          ]
+        },
+        {
+          "title": "Mengenali proses, bukan hanya warna",
+          "paragraphs": [
+            "Dalam resep adaptasi ini, daging sapi bertemu santan dan beragam rempah. Angka waktu adalah panduan, sementara kondisi daging dan tingkat kekeringan tetap perlu diperhatikan. Warna gelap saja bukan satu-satunya hal yang ingin dicapai. Melalui prosesnya, rendang mengajak kita memberi perhatian pada perubahan masakan secara bertahap. Itulah bagian pengalaman dapur yang ingin dibawa kembali ketika hidangan ini dimasak di rumah."
+          ],
+          "sourceIds": [
+            "sasa-rendang",
+            "travel-rendang"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -1449,7 +1605,39 @@
     "culture": {
       "summary": "Gulai ayam menghadirkan kuah santan dengan aroma serai, kunyit dan rempah. Versi ini mengikuti gaya sajian rumah makan Padang.",
       "sourceIds": [
-        "royco-gulai"
+        "royco-gulai",
+        "travel-minang"
+      ],
+      "sections": [
+        {
+          "title": "Santan dalam ragam rasa Minang",
+          "paragraphs": [
+            "Tradisi masakan Minangkabau dikenal melalui penggunaan rempah dan santan pada banyak sajiannya. Namun, tidak semuanya diarahkan menjadi rendang yang kering. Gulai ayam mempertahankan kuah sebagai bagian penting dari hidangan. Membandingkan keduanya membantu kita mengenali keragaman dalam satu wilayah: bahan yang berdekatan bisa menghasilkan pengalaman makan yang berbeda ketika jenis lauk, komposisi bumbu, dan arah pengolahannya berubah."
+          ],
+          "sourceIds": [
+            "travel-minang",
+            "royco-gulai"
+          ]
+        },
+        {
+          "title": "Aroma yang saling melengkapi",
+          "paragraphs": [
+            "Resep rujukan Royco memakai ayam kampung, santan, serai, daun kunyit, daun jeruk, dan lengkuas. Bumbu halusnya mencakup cabai, bawang, jahe, kunyit, serta kemiri. Daftar ini menunjukkan bahwa warna dan aroma gulai dibangun oleh beberapa bahan sekaligus. Santan encer dan kental digunakan dalam tahap yang berbeda pada sumbernya; di layar, takaran praktis membantu membaca jumlah untuk porsi pilihan tanpa menghilangkan catatan versi asal."
+          ],
+          "sourceIds": [
+            "royco-gulai"
+          ]
+        },
+        {
+          "title": "Sajian rumahan dengan karakter sendiri",
+          "paragraphs": [
+            "Gulai ayam dalam katalog ini merupakan adaptasi satu resep, bukan pengganti seluruh variasi gulai Minang. Menyebut asal dan sumbernya memberi ruang untuk perbedaan racikan antardapur. Kamu dapat mengenal sajian ini melalui ayam, kuah santan, dan aroma rempahnya, lalu membandingkannya dengan hidangan daerah lain. Dengan cara tersebut, memasak menjadi kesempatan untuk memahami ragam rasa, bukan sekadar mengikuti daftar bahan yang serupa."
+          ],
+          "sourceIds": [
+            "royco-gulai",
+            "travel-minang"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -1671,7 +1859,39 @@
     "culture": {
       "summary": "Dendeng balado dikenal dalam kuliner Sumatra Barat. Sambal cabai tumbuk kasar memberi lapisan pedas pada irisan daging yang digoreng.",
       "sourceIds": [
-        "rb-dendeng"
+        "rb-dendeng",
+        "travel-minang"
+      ],
+      "sections": [
+        {
+          "title": "Irisan daging dari ranah Minang",
+          "paragraphs": [
+            "Dendeng balado dikenal dalam khazanah kuliner Minangkabau, Sumatra Barat. Karakternya tampak dari irisan daging sapi yang tipis dan lapisan sambal berwarna merah. Di sini, cabai tidak hanya hadir sebagai tambahan di tepi piring. Balado merupakan bagian pembentuk sajian, sehingga daging dan sambalnya perlu dikenali sebagai pasangan yang membawa rasa pedas, gurih, dan aroma bawang."
+          ],
+          "sourceIds": [
+            "travel-minang",
+            "rb-dendeng"
+          ]
+        },
+        {
+          "title": "Dua pekerjaan dalam satu hidangan",
+          "paragraphs": [
+            "Resep rujukan memisahkan pengolahan daging dari pembuatan sambal. Daging dibumbui dan diolah hingga empuk sebelum dipipihkan serta digoreng. Cabai dan bawang kemudian diolah menjadi sambal dengan tekstur yang masih terasa. Urutan ini membentuk perbedaan antara bagian daging dengan lapisan baladonya. Mengetahui perannya membantu kita memahami mengapa hidangan tersebut tidak sama dengan sekadar daging yang dimasak bersama saus cabai."
+          ],
+          "sourceIds": [
+            "rb-dendeng"
+          ]
+        },
+        {
+          "title": "Balado bukan satu ukuran pedas",
+          "paragraphs": [
+            "Ragam bumbu balado memperlihatkan bahwa ciri daerah dapat terbaca melalui cara mengolah cabai dan bahan pendampingnya. Versi resep yang berbeda dapat memberi tingkat pedas serta tekstur daging yang berbeda pula. Katalog ini mencatat satu adaptasi bersumber agar bahan dan langkahnya tetap jelas. Saat membacanya, gunakan cerita ini untuk mengenali karakter hidangan, lalu ikuti takaran dan urutan pada resep yang sedang kamu pilih."
+          ],
+          "sourceIds": [
+            "travel-minang",
+            "rb-dendeng"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -1963,7 +2183,38 @@
     "culture": {
       "summary": "Rawon berasal dari Jawa Timur. Kluwek memberi warna gelap khas pada kuah dagingnya; tauge pendek biasa menjadi pelengkap.",
       "sourceIds": [
-        "travel-rawon"
+        "travel-rawon",
+        "sasa-rawon"
+      ],
+      "sections": [
+        {
+          "title": "Kuah gelap dari Jawa Timur",
+          "paragraphs": [
+            "Rawon merupakan salah satu hidangan yang erat dengan Jawa Timur, termasuk Surabaya, Malang, dan Pasuruan. Penampilannya mudah dikenali melalui kuah daging berwarna gelap. Warna tersebut berasal dari kluwek, bahan yang juga memberi karakter rasa khas. Karena itu, rawon tidak dapat dikenali hanya sebagai sup daging berwarna hitam: bahan pembentuk kuah dan racikan rempahnya merupakan bagian penting dari identitas hidangan."
+          ],
+          "sourceIds": [
+            "travel-rawon"
+          ]
+        },
+        {
+          "title": "Rempah di balik warna",
+          "paragraphs": [
+            "Selain kluwek, gambaran rawon dalam Indonesia Travel mencakup bawang, ketumbar, kunyit, kemiri, serai, daun jeruk, dan lengkuas. Bumbu diolah sebelum dipertemukan dengan kuah dan daging. Kombinasi tersebut memberi aroma yang berbeda dari warna gelapnya saja. Resep dalam katalog memakai satu versi adaptasi; rincian jumlah, pemilihan bahan, serta urutan memasak tetap mengacu pada daftar resep, bukan pada gambaran umum tentang semua rawon."
+          ],
+          "sourceIds": [
+            "travel-rawon",
+            "sasa-rawon"
+          ]
+        },
+        {
+          "title": "Pelengkap yang memberi kontras",
+          "paragraphs": [
+            "Tauge pendek dikenal sebagai salah satu pendamping rawon, memberi perbedaan tekstur terhadap kuah dan daging. Nasi, telur asin, sambal, bawang goreng, atau kerupuk juga dapat menyertai sajian menurut versinya. Pelengkap tersebut membuat pengalaman makan terasa berlapis. Mengenali cara penyajian ini membantu membawa konteks Jawa Timur ke meja makan tanpa harus menyamakan seluruh racikan rawon yang dijumpai di daerah berbeda."
+          ],
+          "sourceIds": [
+            "travel-rawon"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -2265,6 +2516,35 @@
       "summary": "Soto Lamongan memiliki kuah ayam kuning dan pelengkap koya dari kerupuk udang serta bawang. Sajian ini membawa nama daerah asalnya di Jawa Timur.",
       "sourceIds": [
         "lamongan-soto"
+      ],
+      "sections": [
+        {
+          "title": "Nama daerah dalam semangkuk soto",
+          "paragraphs": [
+            "Soto Lamongan membawa nama daerah asalnya di Jawa Timur. Di antara banyak ragam soto Indonesia, versi ini dikenal melalui kuah ayam dan pelengkap yang diracik bersama saat penyajian. Resep yang dipublikasikan Dinas Kebudayaan, Pemuda dan Olahraga dan Pariwisata Kabupaten Lamongan memperlihatkan susunan tersebut: ayam, kuah, bihun atau soun, serta beberapa pelengkap membentuk satu sajian yang utuh."
+          ],
+          "sourceIds": [
+            "lamongan-soto"
+          ]
+        },
+        {
+          "title": "Kuah, ayam, dan koya",
+          "paragraphs": [
+            "Bawang, kunyit, jahe, serai, daun jeruk, dan kemiri hadir pada bumbu rujukannya. Ayam yang direbus kemudian disuwir untuk penyajian. Kerupuk udang dan bawang putih goreng yang dihaluskan menjadi campuran pelengkap yang dikenal sebagai koya. Dengan melihat bagian-bagian tersebut, kita dapat memahami bahwa karakter soto tidak hanya dibangun ketika merebus kuah, tetapi juga ketika isi mangkuk mulai diracik."
+          ],
+          "sourceIds": [
+            "lamongan-soto"
+          ]
+        },
+        {
+          "title": "Meracik sesuai mangkukmu",
+          "paragraphs": [
+            "Telur rebus, daun bawang, bawang goreng, jeruk, dan sambal memberi pilihan lapisan rasa. Setiap tambahan memiliki peran berbeda, sehingga pelengkap dapat dikenali satu per satu. Di aplikasi ini, bahan opsional dipisahkan dari bahan wajib agar pilihanmu tetap jelas. Cerita tentang Soto Lamongan menjadi pintu masuk untuk mengenali ragam soto Nusantara: satu nama daerah membawa susunan bahan dan cara penyajian yang patut diperhatikan."
+          ],
+          "sourceIds": [
+            "lamongan-soto"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -2489,7 +2769,38 @@
     "culture": {
       "summary": "Gudeg lekat dengan Yogyakarta. Nangka muda, santan dan gula merah dimasak perlahan menjadi lauk dengan rasa manis gurih.",
       "sourceIds": [
-        "jogja-gudeg"
+        "jogja-gudeg",
+        "sasa-gudeg"
+      ],
+      "sections": [
+        {
+          "title": "Nangka muda dan identitas Yogyakarta",
+          "paragraphs": [
+            "Gudeg sangat lekat dengan Yogyakarta. Dinas Kebudayaan Kota Yogyakarta menjelaskan bahwa hidangan ini juga memiliki ragam di daerah lain, tetapi hubungan dengan kota tersebut telah menjadi bagian kuat dari identitasnya. Bahan utamanya adalah nangka muda, yang dikenal pula sebagai gori. Dari bahan yang berbeda dengan daging, lahir sajian yang memiliki warna, rasa, dan pengalaman makan khas."
+          ],
+          "sourceIds": [
+            "jogja-gudeg"
+          ]
+        },
+        {
+          "title": "Waktu yang membentuk rasa",
+          "paragraphs": [
+            "Pengolahan perlahan dengan api kecil memberi ruang bagi bahan dan bumbu untuk berpadu. Gudeg Yogyakarta dikenal dengan rasa manis, warna kecokelatan, serta santan yang turut membentuk kekayaan sajiannya. Sumber kebudayaan membedakan gudeg basah yang lebih berkuah dari gudeg kering. Perbedaan ini menunjukkan bahwa nama gudeg mencakup lebih dari satu bentuk hasil akhir, sehingga versi yang dimasak perlu disebut dengan jelas."
+          ],
+          "sourceIds": [
+            "jogja-gudeg"
+          ]
+        },
+        {
+          "title": "Lauk dan kehidupan kuliner kota",
+          "paragraphs": [
+            "Dalam penyajian, gudeg dapat ditemani areh, ayam, telur, tahu, tempe, atau sambal goreng krecek. Pilihan pendamping ikut membentuk satu piring, bukan menghapus nangka muda sebagai pusat hidangan. Gudeg juga hadir dalam kehidupan wisata kuliner Yogyakarta, termasuk kawasan Wijilan. Resep katalog ini adalah salah satu adaptasi untuk dipelajari di dapur; ia mengajak kita mengenal hubungan bahan, proses, dan identitas daerah melalui sajian yang dekat dengan keseharian."
+          ],
+          "sourceIds": [
+            "jogja-gudeg",
+            "sasa-gudeg"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -2800,7 +3111,39 @@
     "culture": {
       "summary": "Coto Makassar memakai rempah dan kacang tanah sangrai untuk kuah yang pekat. Ketupat atau buras sering menjadi teman makannya.",
       "sourceIds": [
-        "travel-coto"
+        "travel-coto",
+        "sasa-coto"
+      ],
+      "sections": [
+        {
+          "title": "Semangkuk rasa Makassar",
+          "paragraphs": [
+            "Coto Makassar merupakan bagian dari kuliner Sulawesi Selatan yang dikenal melalui kuah kaya rempah. Sajian ini dapat memakai daging sapi serta beberapa bagian jeroan, tetapi ada pula pilihan yang menggunakan daging saja. Perbedaan isi tersebut menunjukkan adanya ragam dalam satu nama hidangan. Versi katalog RasaNusantara memakai daging sapi, sehingga isi resepnya perlu dibaca sebagai satu pilihan, bukan gambaran wajib untuk semua coto."
+          ],
+          "sourceIds": [
+            "travel-coto",
+            "sasa-coto"
+          ]
+        },
+        {
+          "title": "Kacang sangrai dalam kuah",
+          "paragraphs": [
+            "Salah satu ciri yang ditekankan Indonesia Travel adalah pemakaian kacang tanah sangrai yang dihaluskan untuk memberi tubuh pada kuah. Perpaduannya dengan rempah membedakan coto dari banyak sup daging lain. Karena itu, kacang bukan hanya hiasan di atas mangkuk. Ia ikut membentuk karakter sajian dan juga perlu diperhatikan sebagai bahan yang dapat memicu alergi pada sebagian orang."
+          ],
+          "sourceIds": [
+            "travel-coto"
+          ]
+        },
+        {
+          "title": "Mengenali isi dan pendamping",
+          "paragraphs": [
+            "Ketupat atau buras dikenal sebagai teman makan coto. Hadirnya makanan berbahan beras itu melengkapi kuah dan potongan daging, membentuk pengalaman makan yang khas. Saat mencoba resepnya, kamu dapat mengenali peran setiap bagian: bahan isi, pengental kuah, rempah, serta pendamping. Hubungan tersebut membuat cerita coto lebih dekat dengan praktik memasak, sekaligus menjaga ruang bagi perbedaan resep antarrumah dan rumah makan."
+          ],
+          "sourceIds": [
+            "travel-coto",
+            "sasa-coto"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -3145,7 +3488,37 @@
     "culture": {
       "summary": "Sop konro adalah sajian iga berkuah khas Makassar. Rempah dan kluwek membentuk kuahnya yang berwarna cokelat gelap.",
       "sourceIds": [
-        "rb-konro"
+        "rb-konro",
+        "travel-konro"
+      ],
+      "sections": [
+        {
+          "title": "Iga dan kuah khas Makassar",
+          "paragraphs": [
+            "Sop konro dikenal sebagai hidangan iga berkuah dari Makassar, Sulawesi Selatan. Iga bukan hanya penanda penampilan, tetapi bagian utama yang bertemu kuah kaya rempah. Indonesia Travel menggambarkan kuahnya berwarna cokelat gelap, dengan kluwek sebagai salah satu pemberi karakter. Melalui ciri tersebut, kita dapat membedakan konro dari sup iga lain yang memiliki susunan bumbu dan warna kuah berbeda."
+          ],
+          "sourceIds": [
+            "travel-konro"
+          ]
+        },
+        {
+          "title": "Aroma yang tidak berdiri sendiri",
+          "paragraphs": [
+            "Resep rujukan RasaBunda mempertemukan kluwek dengan bawang, kemiri, jintan, jahe, dan beberapa rempah lain. Cengkih, kapulaga, serta kayu manis ikut hadir dalam rangkaian aromanya. Iga diolah hingga empuk sebelum seluruh unsur sajian bertemu. Cerita bahan ini bukan pengganti langkah memasak, tetapi membantu menjelaskan mengapa rasa konro tidak datang dari satu bumbu saja."
+          ],
+          "sourceIds": [
+            "rb-konro"
+          ]
+        },
+        {
+          "title": "Sup dan saudara panggangnya",
+          "paragraphs": [
+            "Konro memiliki pula versi bakar dengan karakter aroma panggang. Pada sop konro, kuah tetap menjadi pusat pengalaman makan bersama iga. Nasi atau ketupat dapat menjadi pendamping, sementara sambal dan jeruk memberi sentuhan rasa lain. Dengan melihat kedua bentuk tersebut, kita mengenali cara satu keluarga hidangan dapat berkembang melalui teknik penyajian yang berbeda, tanpa kehilangan kaitannya dengan kuliner Makassar."
+          ],
+          "sourceIds": [
+            "travel-konro"
+          ]
+        }
       ]
     },
     "sourceIds": [
@@ -3385,7 +3758,39 @@
     "culture": {
       "summary": "Konro bakar memberi sentuhan panggang pada iga yang lebih dahulu direbus bersama bumbu. Ini berbeda dari konro yang disajikan sebagai sup.",
       "sourceIds": [
-        "tastemade-konro"
+        "tastemade-konro",
+        "travel-konro-bakar",
+        "travel-konro"
+      ],
+      "sections": [
+        {
+          "title": "Wajah panggang dari keluarga konro",
+          "paragraphs": [
+            "Konro bakar menghadirkan iga dalam bentuk yang berbeda dari sop konro. Hubungannya dengan kuliner Makassar tetap kuat, tetapi pengalaman menyantapnya lebih menonjolkan daging dan lapisan bumbu pada permukaan iga. Indonesia Travel menggambarkan sajian konro bakar melalui daging yang empuk, kekayaan rempah, dan aroma panggang. Ciri itu membantu mengenalinya tanpa harus menganggap seluruh hidangan iga bakar memiliki racikan yang sama."
+          ],
+          "sourceIds": [
+            "travel-konro-bakar"
+          ]
+        },
+        {
+          "title": "Dari rebusan menuju panggangan",
+          "paragraphs": [
+            "Pada adaptasi resep yang ada di katalog ini, iga lebih dahulu dimasak bersama bumbu sebelum masuk ke tahap pemanggangan. Dua tahap tersebut memiliki tugas berbeda: pengolahan awal membantu menyiapkan daging, sedangkan pemanggangan memberi karakter permukaan dan aroma. Karena itu, sajian ini bukan sekadar memindahkan iga mentah ke atas panggangan. Rincian waktu dan takaran tetap perlu mengikuti resep yang dipilih."
+          ],
+          "sourceIds": [
+            "tastemade-konro"
+          ]
+        },
+        {
+          "title": "Mengenal rasa melalui perbandingan",
+          "paragraphs": [
+            "Sajian konro bakar dapat ditemani kuah konro yang berempah. Membandingkannya dengan versi sup memberi cara menarik untuk membaca keragaman kuliner: bahan utama yang berdekatan dapat hadir sebagai hidangan dengan suasana makan berbeda. Di RasaNusantara, kedua versi dipisahkan agar bahan, langkah, dan cerita tidak tertukar. Kamu dapat menjelajahinya sebagai dua pintu menuju keluarga rasa Makassar yang sama."
+          ],
+          "sourceIds": [
+            "travel-konro-bakar",
+            "travel-konro"
+          ]
+        }
       ]
     },
     "sourceIds": [

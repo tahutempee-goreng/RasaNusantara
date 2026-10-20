@@ -123,3 +123,12 @@
 .guideAbout{display:flex;width:fit-content;max-width:100%;margin-top:12px}
 
 .recipeSlideStage [data-outgoing=true] .polaroidStack::before{content:none}
+
+/* Keep the complete wing envelope in its own sky, away from header and note. */
+.hornbill{left:clamp(40px,8vw,140px);right:auto;top:132px;width:145px;height:120px;z-index:2}
+.birdCanvas{transform:scale(.145)}
+@media(max-width:1100px){.hornbill{top:126px;left:clamp(32px,7vw,85px);width:116px;height:98px}.birdCanvas{transform:scale(.116)}}
+@media(max-width:700px){.hornbill{top:138px;left:30px;width:96px;height:82px}.birdCanvas{transform:scale(.096)}}
+@media(max-height:500px) and (orientation:landscape){.hornbill{top:124px;left:clamp(30px,7vw,80px);width:100px;height:84px}.birdCanvas{transform:scale(.1)}}
+
+@media(min-width:1101px) and (max-height:850px){.hornbill{width:116px;height:98px}.birdCanvas{transform:scale(.116)}}

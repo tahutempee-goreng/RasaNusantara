@@ -25,7 +25,7 @@ export function JournalHome(props: Props) {
       <div className={styles.seaLines} aria-hidden="true"/>
       <img className={styles.villageLayer} src="/images/journal/nusantara-village-v2.webp" alt="" fetchPriority="high"/>
       <span className={styles.coverSeal} aria-hidden="true">CATATAN RASA<br/>KEPULAUAN INDONESIA</span>
-      <div className={styles.hornbill} aria-hidden="true"><div className={styles.birdCanvas}><span className={styles.upperWing}/><span className={styles.lowerWing}/><span className={styles.birdBody}/></div></div>
+      <div className={styles.hornbill} data-hornbill aria-hidden="true"><div className={styles.birdCanvas}><span className={styles.upperWing}/><span className={styles.lowerWing}/><span className={styles.birdBody}/></div></div>
       <aside className={styles.paperSticker} aria-label="Catatan sampul"><span>Banyak pulau,<br/>banyak rasa<br/>untuk dikenal.</span><small>DARI DAPUR<br/>NUSANTARA</small></aside>
       <div className={styles.coverTitle}>
         <h1 id="journal-title">RASA DARI NUSANTARA,<br/>CERITA DI MEJA KITA.</h1>
