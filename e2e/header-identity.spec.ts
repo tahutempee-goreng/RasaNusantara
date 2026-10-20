@@ -6,6 +6,7 @@ test('culinary identity opens real application information and remains clear bes
   const badge=page.getByRole('link',{name:'Tentang RasaNusantara',exact:true});
   await expect(badge).toHaveAttribute('href','/tentang');await expect(badge).toContainText('Nusantara');await expect(badge).toContainText('Tentang');await expect(badge).toBeInViewport();
   const menu=(await page.locator('.site-menu').boundingBox())!,box=(await badge.boundingBox())!;expect(menu.x+menu.width).toBeLessThanOrEqual(box.x);
+  const last=page.getByRole('link',{name:'Buka bab: Panduan',exact:true});await last.click();await expect(last).toHaveAttribute('aria-current','step');
   await badge.focus();await expect(badge).toBeFocused();await badge.press('Enter');
   await expect(page.getByRole('heading',{name:'Dari dapur, ke cerita.',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'Resep & sumber',exact:true})).toBeVisible();await expect.poll(async()=>{const back=await page.locator('.about-page .back').boundingBox(),header=await page.locator('.site-header').boundingBox();return Boolean(back&&header&&back.y>=header.y+header.height);}).toBe(true);
  }
