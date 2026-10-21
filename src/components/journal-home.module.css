@@ -156,3 +156,6 @@
  .journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .chapterNav{top:var(--chapter-nav-top,88px);bottom:8px;left:auto;right:4px;transform:none;flex-direction:column;justify-content:center;background:none;border:0;padding:0}
  .journal:is([data-scroll-mode=native],[data-scroll-mode=paper-light]) .chapterNav a{flex-shrink:0}
 }
+
+/* Keep the postcard foliage inside its own paper when the mobile sheet lifts. */
+.postcardChapter{overflow:clip}
