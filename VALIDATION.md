@@ -269,3 +269,6 @@ Verifikasi produksi v23 (21 Oktober 2026): kode 7987d7115eda619924d1d8b7344a1307
 
 
 Verifikasi produksi 21 Oktober 2026: commit 575e68076bb73140c6b745f2742c93d36e52f8bf sudah READY di https://rasanusantara-ashen.vercel.app/. Chrome dan WebKit memuat link favicon/Apple yang benar dari halaman online, ketiga aset HTTP200, dan SVG terdekode. Ukuran kecil diperiksa pada pratinjau aset terpisah; screenshot tidak mengklaim memotret chrome/tab native browser. Pemeriksaan awal pratinjau sempat tertutup intro karena memakai dokumen aplikasi yang masih hydration; fixture dipisahkan ke dokumen kosong dan konfirmasi benar. Metadata dan OG tetap lolos dua tes terkait. Hasil V24-PRODUKSI.json dan favicon-v24-online-*.png.
+
+
+Verifikasi produksi 21 Oktober 2026: commit 7ac7a39331209fe230091a68e9c3436904853120 sudah READY di https://rasanusantara-ashen.vercel.app/. Empat kasus Chrome desktop/Android dan WebKit iPhone tegak/mendatar lulus tanpa pageerror. Piksel di bawah tepi lembar tidak berubah ketika rempah outgoing disembunyikan, membuktikan batas klip berfungsi pada versi online. Screenshot v25-online-*.png dan V25-PRODUKSI.json. Hanya emulasi; iPhone fisik tetap perlu pengguna coba.
