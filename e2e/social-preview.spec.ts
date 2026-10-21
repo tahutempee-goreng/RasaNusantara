@@ -11,11 +11,14 @@ test('sharing bots receive complete public metadata in the initial document head
    expect(head).toContain(`property="og:image" content="${site}/og/rasanusantara.png"`);
    expect(head).toContain('property="og:image:width" content="1200"');expect(head).toContain('property="og:image:height" content="630"');
    expect(head).toContain('property="og:locale" content="id_ID"');expect(head).toContain('name="twitter:card" content="summary_large_image"');
-   expect(head).toContain('property="og:description"');expect(head).not.toContain('GEMINI_API_KEY');
+   expect(head).toContain('href="/favicon.svg"');expect(head).toContain('href="/favicon.ico"');expect(head).toContain('rel="apple-touch-icon"');expect(head).toContain('property="og:description"');expect(head).not.toContain('GEMINI_API_KEY');
   }
  }
 });
 test('share image is public, correctly sized PNG within a practical file size',async({request})=>{
  const response = await request.get('/og/rasanusantara.png');expect(response.status()).toBe(200);expect(response.headers()['content-type']).toContain('image/png');
  const bytes=await response.body();expect(bytes.subarray(0,8).toString('hex')).toBe('89504e470d0a1a0a');expect(bytes.readUInt32BE(16)).toBe(1200);expect(bytes.readUInt32BE(20)).toBe(630);expect(bytes.length).toBeLessThan(2*1024*1024);
+ const svg=await request.get('/favicon.svg');expect(svg.status()).toBe(200);expect(svg.headers()['content-type']).toContain('image/svg+xml');expect(await svg.text()).toContain('viewBox="0 0 64 64"');
+ const ico=await request.get('/favicon.ico');expect(ico.status()).toBe(200);const icon=await ico.body();expect(icon.readUInt16LE(2)).toBe(1);expect(icon.readUInt16LE(4)).toBe(3);
+ const apple=await request.get('/apple-touch-icon.png');expect(apple.status()).toBe(200);const png=await apple.body();expect(png.readUInt32BE(16)).toBe(180);expect(png.readUInt32BE(20)).toBe(180);
 });
