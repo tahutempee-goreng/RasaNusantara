@@ -20,13 +20,13 @@ export function SiteHeader() {
   function close() { setOpen(false); setDropdown(null); }
   return <header className={path === '/' ? 'site-header journal-header' : 'site-header'} data-overlay={path === '/' ? 'true' : undefined} ref={header}>
     <div className="site-nav-wrap">
-      <Link className="brand" href="/" onClick={close} aria-label="RasaNusantara — Beranda"><span className="brand-wordmark">RasaNusantara</span></Link>
+      <Link className="brand" href="/#sampul" onClick={close} aria-label="RasaNusantara — Beranda"><span className="brand-wordmark">RasaNusantara</span></Link>
       <button ref={menuButton} className="nav-toggle" aria-expanded={open} aria-controls="site-menu" onClick={() => { setOpen(!open); setDropdown(null); }}><span>{open ? 'Tutup' : 'Menu'}</span><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d={open ? 'M5 5l10 10M15 5L5 15' : 'M3 6h14M3 10h14M3 14h14'} stroke="currentColor" strokeWidth="1.5" fill="none"/></svg></button>
       <nav aria-label="Navigasi utama" id="site-menu" className={open ? 'site-menu is-open' : 'site-menu'}>
-        <Link href="/" aria-current={path === '/' ? 'page' : undefined} onClick={close}>Beranda</Link>
-        <div className="nav-disclosure"><button aria-expanded={dropdown === 'daerah'} aria-controls="region-menu" onClick={() => setDropdown(dropdown === 'daerah' ? null : 'daerah')}>Daerah <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="m5 7 5 5 5-5" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg></button>{dropdown === 'daerah' && <div id="region-menu" className="nav-popover"><Link href="/#peta" onClick={close}>Jelajahi daerah Nusantara</Link><Link href="/#cari" onClick={close}>Daerah & ketersediaan resep</Link></div>}</div>
-        <Link href="/cari" aria-current={path === '/cari' ? 'page' : undefined} onClick={close}>Resep</Link>
+        <Link href="/#sampul" aria-current={path === '/' ? 'page' : undefined} onClick={close}>Beranda</Link>
         <Link href="/#cerita" onClick={close}>Cerita Budaya</Link>
+        <Link href="/#resep-pilihan" onClick={close}>Resep</Link>
+        <Link href="/#peta" onClick={close}>Daerah</Link>
         <div className="nav-disclosure"><button aria-expanded={dropdown === 'dapur'} aria-controls="kitchen-menu" onClick={() => setDropdown(dropdown === 'dapur' ? null : 'dapur')}>Dapur <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="m5 7 5 5 5-5" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg></button>{dropdown === 'dapur' && <div id="kitchen-menu" className="nav-popover"><Link href="/#cooking-guide" onClick={close}>Panduan Memasak</Link><Link href="/tentang" onClick={close}>Tentang resep & sumber</Link></div>}</div>
         <Link href="/cari" className="nav-cta" onClick={close}>Cari dari Bahan <span aria-hidden="true">↗</span></Link>
       </nav>
